@@ -27,7 +27,7 @@ def lengthOfLongestSubstring(self, s: str) -> int:
     return ans
 ```
 
-解法二（分别判断以每个字为结束的最长无重复子串）：
+解法二（分别判断以每个字为结束的最长无重复子串；即遇到重复的字符，则判断是否移动起始下标的位置）：
 
 ```python
 def lengthOfLongestSubstring(self, s: str) -> int:
@@ -43,3 +43,4 @@ def lengthOfLongestSubstring(self, s: str) -> int:
             max_long = now_long
     return max_long
 ```
+
