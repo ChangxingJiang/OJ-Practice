@@ -1,6 +1,6 @@
 # LeetCode题解：0001（哈希表的应用）
 
-[题目链接](https://leetcode-cn.com/problems/two-sum/)
+[题目链接](https://leetcode-cn.com/problems/two-sum/)（简单）
 
 | 解法           | 时间复杂度 | 空间复杂度 | 执行用时         | 内存消耗         |
 | -------------- | ---------- | ---------- | ---------------- | ---------------- |
@@ -11,11 +11,11 @@
 解法一（直接两次遍历）：
 
 ```python
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
-        for i in range(len(nums)):
-            for j in range(i + 1, len(nums)):
-                if nums[i] + nums[j] == target:
-                    return [i, j]
+def twoSum(self, nums: List[int], target: int) -> List[int]:
+    for i in range(len(nums)):
+        for j in range(i + 1, len(nums)):
+            if nums[i] + nums[j] == target:
+                return [i, j]
 ```
 
 解法二（使用使用列表的\_\_contain()\_\_方法替换第二层遍历）：
