@@ -13,7 +13,7 @@
 | [0010.正则表达式匹配](https://leetcode-cn.com/problems/regular-expression-matching/) | 困难     | 字符串、动态规划、回溯算法             |                |
 | [0011.盛最多水的容器](https://leetcode-cn.com/problems/container-with-most-water/) | 中等     | 数组、双指针                           |                |
 | [0012.整数转罗马数字](https://leetcode-cn.com/problems/integer-to-roman/) | 中等     | 数学、字符串                           |                |
-| [0013.罗马数字转整数](https://leetcode-cn.com/problems/roman-to-integer/) | 简单     | 数学、字符串                           |                |
+| [0013.罗马数字转整数](https://leetcode-cn.com/problems/roman-to-integer/) | 简单     | 数学、字符串                           | 52ms (>92.57%) |
 | [0014.最长公共前缀](https://leetcode-cn.com/problems/longest-common-prefix/) | 简单     | 字符串                                 |                |
 | [0015.三数之和](https://leetcode-cn.com/problems/3sum/)      | 中等     | 数组、双指针                           |                |
 | [0016.最接近的三数之和](https://leetcode-cn.com/problems/3sum-closest/) | 中等     | 数组、双指针                           |                |
