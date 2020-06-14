@@ -9,7 +9,7 @@
 | [0006.Z字形换](https://leetcode-cn.com/problems/longest-palindromic-substring/) | 中等     | 字符串                                 |                |
 | [0007.整数反转](https://leetcode-cn.com/problems/reverse-integer/) | 简单     | 数学                                   | 40ms (>83.92%) |
 | [0008.字符串转换整数(atoi)](https://leetcode-cn.com/problems/string-to-integer-atoi/) | 中等     | 数学、字符串                           |                |
-| [0009.回文数](https://leetcode-cn.com/problems/palindrome-number/) | 简单     | 数学                                   |                |
+| [0009.回文数](https://leetcode-cn.com/problems/palindrome-number/) | 简单     | 数学                                   | 72ms (>94.21%) |
 | [0010.正则表达式匹配](https://leetcode-cn.com/problems/regular-expression-matching/) | 困难     | 字符串、动态规划、回溯算法             |                |
 | [0011.盛最多水的容器](https://leetcode-cn.com/problems/container-with-most-water/) | 中等     | 数组、双指针                           |                |
 | [0012.整数转罗马数字](https://leetcode-cn.com/problems/integer-to-roman/) | 中等     | 数学、字符串                           |                |
