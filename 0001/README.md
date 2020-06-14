@@ -1,4 +1,4 @@
-# LeetCode题解：0001（哈希表的应用）
+# LeetCode题解：0001（两数之和）
 
 [题目链接](https://leetcode-cn.com/problems/two-sum/)（简单）
 
