@@ -49,4 +49,36 @@
 | [0046.全排列](https://leetcode-cn.com/problems/permutations/) | 中等     | 回溯算法                               |                |
 | [0047.全排列II](https://leetcode-cn.com/problems/permutations-ii/) | 中等     | 回溯算法                               |                |
 | [0048.旋转图像](https://leetcode-cn.com/problems/rotate-image/) | 中等     | 数组                                   |                |
-
+| [0049.字母异位词分组](https://leetcode-cn.com/problems/group-anagrams/) | 中等     | 哈希表、字符串                         |                |
+| [0050.Pow(x,n)](https://leetcode-cn.com/problems/powx-n/0)   | 中等     | 数学、二分查找                         |                |
+| [0051.N皇后](https://leetcode-cn.com/problems/n-queens/)     | 困难     | 回溯算法                               |                |
+| [0052.N皇后II](https://leetcode-cn.com/problems/n-queens-ii/) | 困难     | 回溯算法                               |                |
+| [0053.最大子序和](https://leetcode-cn.com/problems/maximum-subarray/) | 简单     | 数组、分治算法、动态规划               |                |
+| [0054.螺旋矩阵](https://leetcode-cn.com/problems/spiral-matrix/) | 中等     | 数组                                   |                |
+| [0055.跳跃游戏](https://leetcode-cn.com/problems/jump-game/) | 中等     | 贪心算法、数组                         |                |
+| [0056.合并区间](https://leetcode-cn.com/problems/merge-intervals/) | 中等     | 排序、数组                             |                |
+| [0057.插入区间](https://leetcode-cn.com/problems/insert-interval/) | 困难     | 排序、数组                             |                |
+| [0058.最后一个单词的长度](https://leetcode-cn.com/problems/length-of-last-word/) | 简单     | 字符串                                 |                |
+|                                                              |          |                                        |                |
+|                                                              |          |                                        |                |
+|                                                              |          |                                        |                |
+|                                                              |          |                                        |                |
+|                                                              |          |                                        |                |
+|                                                              |          |                                        |                |
+|                                                              |          |                                        |                |
+|                                                              |          |                                        |                |
+|                                                              |          |                                        |                |
+|                                                              |          |                                        |                |
+|                                                              |          |                                        |                |
+|                                                              |          |                                        |                |
+|                                                              |          |                                        |                |
+|                                                              |          |                                        |                |
+|                                                              |          |                                        |                |
+|                                                              |          |                                        |                |
+|                                                              |          |                                        |                |
+|                                                              |          |                                        |                |
+|                                                              |          |                                        |                |
+|                                                              |          |                                        |                |
+|                                                              |          |                                        |                |
+|                                                              |          |                                        |                |
+|                                                              |          |                                        |                |
