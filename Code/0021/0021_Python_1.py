@@ -1,4 +1,4 @@
-from LeetCode.toolkit import ListNode
+from toolkit import ListNode
 
 
 class Solution:

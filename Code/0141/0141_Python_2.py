@@ -1,4 +1,4 @@
-from LeetCode.toolkit import ListNode, build_ListNode_with_pos
+from toolkit import ListNode,build_ListNode_with_pos
 
 
 class Solution:

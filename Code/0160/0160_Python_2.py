@@ -1,4 +1,4 @@
-from LeetCode.toolkit import ListNode, build_ListNode_with_skip
+from toolkit import ListNode,build_ListNode_with_skip
 
 
 class Solution:

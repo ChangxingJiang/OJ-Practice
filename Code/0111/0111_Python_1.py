@@ -1,4 +1,4 @@
-from LeetCode.toolkit import TreeNode, build_TreeNode
+from toolkit import TreeNode,build_TreeNode
 
 
 class Solution:
