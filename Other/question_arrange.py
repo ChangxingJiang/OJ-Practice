@@ -33,7 +33,6 @@ def arrange_problem():
         title = question_item["stat"]["question__title"]
 
         # 提取题目Url
-        num = question_item["stat"]["frontend_question_id"]  # 题目编号
         title = question_item["stat"]["question__title"]  # 题目标题
         url = "https://leetcode-cn.com/problems/" + question_item["stat"]["question__title_slug"] + "/"
 
@@ -109,7 +108,6 @@ if __name__ == "__main__":
     for i in range(1, 1486):
         num = str(i).zfill(4)  # 题目编号
         if num not in problems:
-            # print("缺失题目:", num)
             continue
 
         title = problems[num]["title"]
@@ -128,9 +126,6 @@ if __name__ == "__main__":
 
         label = ""
         if id in labels:
-            # print(labels[id])
-            label = "[" + ",".join(labels[id]) + "]"
-            paid_name = "免费"
+            label = ",".join(labels[id])
 
-        print("| [{}.{}]({}) {} |  | {} |".format(num, title, url, label, level))
-        print("| {} |  |".format(num, title, level_name, paid_name, url))
+        print("| {} | [{}]({}) | {} | {} | {} |".format(num, title, url, level, label, paid))
