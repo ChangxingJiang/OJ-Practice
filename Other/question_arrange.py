@@ -1,3 +1,12 @@
+"""
+题目格式整理
+
+题目列表Url：https://leetcode-cn.com/api/problems/all/
+题目翻译Url：https://leetcode-cn.com/graphql
+题目标签Url：https://leetcode-cn.com/problems/api/tags/
+题目类型Url：https://leetcode-cn.com/problems/api/favorites/
+"""
+
 import json
 
 if __name__ == "__main__":
