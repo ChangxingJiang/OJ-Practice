@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 """
 题目格式整理工具
 
@@ -9,7 +7,6 @@
 题目类型Url：https://leetcode-cn.com/problems/api/favorites/
 """
 
->>>>>>> Stashed changes
 import json
 
 
@@ -36,6 +33,8 @@ def arrange_problem():
         title = question_item["stat"]["question__title"]
 
         # 提取题目Url
+        num = question_item["stat"]["frontend_question_id"]  # 题目编号
+        title = question_item["stat"]["question__title"]  # 题目标题
         url = "https://leetcode-cn.com/problems/" + question_item["stat"]["question__title_slug"] + "/"
 
         # 提取题目难度
@@ -119,9 +118,9 @@ if __name__ == "__main__":
         paid = problems[num]["paid"]
 
         if paid:
-            paid = "❌"
+            paid = "会员"
         else:
-            paid = ""
+            paid = "免费"
 
         id = problems[num]["id"]
         if num in translates:
@@ -131,5 +130,7 @@ if __name__ == "__main__":
         if id in labels:
             # print(labels[id])
             label = "[" + ",".join(labels[id]) + "]"
+            paid_name = "免费"
 
         print("| [{}.{}]({}) {} |  | {} |".format(num, title, url, label, level))
+        print("| {} |  |".format(num, title, level_name, paid_name, url))
