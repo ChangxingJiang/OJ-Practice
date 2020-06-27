@@ -1,0 +1,23 @@
+class Solution:
+    def isUgly(self, num: int) -> bool:
+        if num <=0:
+            return False
+        while num > 1:
+            if num % 2 == 0:
+                num /= 2
+            elif num % 3 == 0:
+                num /= 3
+            elif num % 5 == 0:
+                num /= 5
+            else:
+                return False
+        else:
+            return True
+
+
+if __name__ == "__main__":
+    print(Solution().isUgly(1))  # True
+    print(Solution().isUgly(6))  # True
+    print(Solution().isUgly(8))  # True
+    print(Solution().isUgly(14))  # False
+    print(Solution().isUgly(-2147483648))  # False

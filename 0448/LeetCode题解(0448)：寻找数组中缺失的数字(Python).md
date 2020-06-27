@@ -1,8 +1,6 @@
-# LeetCode题解(0999)：()
+# LeetCode题解(0448)：寻找数组中缺失的数字(Python)
 
-题目：[原题链接]()（简单）
-
-题目标签：
+题目：[原题链接](https://leetcode-cn.com/problems/find-all-numbers-disappeared-in-an-array/)（简单）
 
 | 解法           | 时间复杂度 | 空间复杂度 | 执行用时 |
 | -------------- | ---------- | ---------- | -------- |

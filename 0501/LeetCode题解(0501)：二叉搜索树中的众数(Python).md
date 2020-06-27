@@ -1,6 +1,6 @@
-# LeetCode题解(0999)：()
+# LeetCode题解(0501)：二叉搜索树中的众数(Python)
 
-题目：[原题链接]()（简单）
+题目：[原题链接](https://leetcode-cn.com/problems/find-mode-in-binary-search-tree/)（简单）
 
 题目标签：
 

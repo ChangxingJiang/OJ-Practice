@@ -1,6 +1,6 @@
-# LeetCode题解(0999)：()
+# LeetCode题解(0485)：数组中最大连续1的数量(Python)
 
-题目：[原题链接]()（简单）
+题目：[原题链接](https://leetcode-cn.com/problems/max-consecutive-ones/)（简单）
 
 题目标签：
 

@@ -1,6 +1,6 @@
-# LeetCode题解(0999)：()
+# LeetCode题解(0506)：判断数组中前三大的数字(Python)
 
-题目：[原题链接]()（简单）
+题目：[原题链接](https://leetcode-cn.com/problems/relative-ranks/)（简单）
 
 题目标签：
 

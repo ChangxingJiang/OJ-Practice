@@ -1,8 +1,6 @@
-# LeetCode题解(0999)：()
+# LeetCode题解(0387)：查找字符串中的第一个唯一字符的索引(Python)
 
-题目：[原题链接]()（简单）
-
-题目标签：
+题目：[原题链接](https://leetcode-cn.com/problems/first-unique-character-in-a-string/)（简单）
 
 | 解法           | 时间复杂度 | 空间复杂度 | 执行用时 |
 | -------------- | ---------- | ---------- | -------- |

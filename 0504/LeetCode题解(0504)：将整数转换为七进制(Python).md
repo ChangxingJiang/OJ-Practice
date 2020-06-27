@@ -1,6 +1,6 @@
-# LeetCode题解(0999)：()
+# LeetCode题解(0504)：将整数转换为七进制(Python)
 
-题目：[原题链接]()（简单）
+题目：[原题链接](https://leetcode-cn.com/problems/base-7/)（简单）
 
 题目标签：
 

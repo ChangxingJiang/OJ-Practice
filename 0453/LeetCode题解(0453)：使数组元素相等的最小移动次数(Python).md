@@ -1,8 +1,6 @@
-# LeetCode题解(0999)：()
+# LeetCode题解(0453)：使数组元素相等的最小移动次数(Python)
 
-题目：[原题链接]()（简单）
-
-题目标签：
+题目：[原题链接](https://leetcode-cn.com/problems/minimum-moves-to-equal-array-elements/)（简单）
 
 | 解法           | 时间复杂度 | 空间复杂度 | 执行用时 |
 | -------------- | ---------- | ---------- | -------- |

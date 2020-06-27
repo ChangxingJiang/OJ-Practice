@@ -1,6 +1,6 @@
-# LeetCode题解(0999)：()
+# LeetCode题解(0507)：判断整数是否为完美数(Python)
 
-题目：[原题链接]()（简单）
+题目：[原题链接](https://leetcode-cn.com/problems/perfect-number/)（简单）
 
 题目标签：
 

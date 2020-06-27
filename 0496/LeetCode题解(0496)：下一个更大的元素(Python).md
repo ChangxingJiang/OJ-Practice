@@ -1,6 +1,6 @@
-# LeetCode题解(0999)：()
+# LeetCode题解(0496)：下一个更大的元素(Python)
 
-题目：[原题链接]()（简单）
+题目：[原题链接](https://leetcode-cn.com/problems/next-greater-element-i/)（简单）
 
 题目标签：
 

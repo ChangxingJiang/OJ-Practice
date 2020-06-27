@@ -1,6 +1,6 @@
-# LeetCode题解(0999)：()
+# LeetCode题解(0475)：计算覆盖数组的最小半径(Python)
 
-题目：[原题链接]()（简单）
+题目：[原题链接](https://leetcode-cn.com/problems/heaters/)（简单）
 
 题目标签：
 
