@@ -1,6 +1,12 @@
 class Solution:
     def canConstruct(self, ransomNote: str, magazine: str) -> bool:
-        pass
+        for c in ransomNote:
+            if c in magazine:
+                magazine = magazine.replace(c, "", 1)
+            else:
+                return False
+        else:
+            return True
 
 
 if __name__ == "__main__":
