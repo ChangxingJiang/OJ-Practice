@@ -1,10 +1,6 @@
 class Solution:
     def arrangeCoins(self, n: int) -> int:
-        ans = 1
-        while n >= ans:
-            n -= ans
-            ans += 1
-        return ans - 1
+        return int((pow(8 * n + 1, 0.5) - 1) / 2)
 
 
 if __name__ == "__main__":
