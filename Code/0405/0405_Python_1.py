@@ -1,6 +1,9 @@
 class Solution:
     def toHex(self, num: int) -> str:
-        pass
+        if num >= 0:
+            return str(hex(num))[2:]
+        else:
+            return str(hex(int("FFFFFFFF", base=16) + num + 1))[2:]
 
 
 if __name__ == "__main__":
