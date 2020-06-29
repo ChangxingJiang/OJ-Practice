@@ -1,6 +1,7 @@
 class Solution:
     def fib(self, N: int) -> int:
-        pass
+        x = (1 + 5 ** 0.5) / 2
+        return int((x ** N + 1) / 5 ** 0.5)
 
 
 if __name__ == "__main__":
