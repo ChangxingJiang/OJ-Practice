@@ -3,7 +3,11 @@ from typing import List
 
 class Solution:
     def arrayPairSum(self, nums: List[int]) -> int:
-        pass
+        nums.sort()
+        ans = 0
+        for i in range(0, len(nums), 2):
+            ans += nums[i]
+        return ans
 
 
 if __name__ == "__main__":
