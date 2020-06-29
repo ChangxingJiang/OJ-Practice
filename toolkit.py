@@ -158,6 +158,45 @@ def build_TreeNode(val):
         return None
 
 
+class Node:
+    """
+    LeetCode官方Node类仿写（模拟官方功能）
+    主要用于本地IDE调试
+    """
+
+    def __init__(self, val=None, children=None):
+        self.val = val
+        self.children = children
+
+    def add_children(self, node):
+        if self.children is None:
+            self.children = []
+        self.children.append(node)
+
+
+def build_Node(val):
+    if val is None:
+        return None
+    elif isinstance(val, int) or isinstance(val, str):
+        return Node(val=val)
+    elif isinstance(val, list):
+        if len(val) == 0:
+            return None
+        head = Node(val[0])
+        node_list = [head]
+        now_node = None
+        for i in range(1, len(val)):
+            v = val[i]
+            if v is None:
+                now_node = node_list.pop(0)
+            else:
+                node = Node(v)
+                now_node.add_children(node)
+                node_list.append(node)
+        return head
+
+
 if __name__ == "__main__":
-    print(ListNode([3, 2, 0, -4]).set_cycle(pos=1))
+    tree = build_Node([1, None, 3, 2, 4, None, 5, 6])
+    print(tree.children)
     # print(build_TreeNode([1, None, 2, 3, 4]))

@@ -1,6 +1,8 @@
-# LeetCode题解(0999)：()
+# LeetCode题解(0530)：二叉搜索树的最小绝对差(Python)
 
-题目：[原题链接]()（简单）
+题目：[原题链接](https://leetcode-cn.com/problems/minimum-absolute-difference-in-bst/)（简单）
+
+题目标签：
 
 | 解法           | 时间复杂度 | 空间复杂度 | 执行用时 |
 | -------------- | ---------- | ---------- | -------- |
