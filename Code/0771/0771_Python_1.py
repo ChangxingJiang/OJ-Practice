@@ -1,6 +1,9 @@
 class Solution:
     def numJewelsInStones(self, J: str, S: str) -> int:
-        pass
+        ans = 0
+        for j in J:
+            ans += S.count(j)
+        return ans
 
 
 if __name__ == "__main__":

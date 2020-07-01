@@ -3,7 +3,16 @@ from typing import List
 
 class Solution:
     def letterCasePermutation(self, S: str) -> List[str]:
-        pass
+        ans = [S]
+        for i in range(len(S)):
+            s = S[i]
+            if s.isalpha():
+                new = []
+                for a in ans:
+                    new.append(a[:i] + s.lower() + a[i + 1:])
+                    new.append(a[:i] + s.upper() + a[i + 1:])
+                ans = new
+        return ans
 
 
 if __name__ == "__main__":
