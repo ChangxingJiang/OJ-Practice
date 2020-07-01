@@ -1,6 +1,6 @@
 class Solution:
     def toLowerCase(self, str: str) -> str:
-        pass
+        return str.lower()
 
 
 if __name__ == "__main__":
