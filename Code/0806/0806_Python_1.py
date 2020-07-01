@@ -3,7 +3,15 @@ from typing import List
 
 class Solution:
     def numberOfLines(self, widths: List[int], S: str) -> List[int]:
-        pass
+        line = 1
+        now = 0
+        for s in S:
+            width = widths[ord(s) - 97]
+            if now + width > 100:
+                line += 1
+                now = 0
+            now += width
+        return [line, now]
 
 
 if __name__ == "__main__":
