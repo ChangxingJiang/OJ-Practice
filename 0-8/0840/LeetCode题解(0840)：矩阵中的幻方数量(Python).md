@@ -1,6 +1,6 @@
-# LeetCode题解(0733)：图像渲染(Python)
+# LeetCode题解(0840)：矩阵中的幻方数量(Python)
 
-题目：[原题链接](https://leetcode-cn.com/problems/flood-fill/)（简单）
+题目：[原题链接](https://leetcode-cn.com/problems/magic-squares-in-grid/)（简单）
 
 | 解法           | 时间复杂度 | 空间复杂度 | 执行用时 |
 | -------------- | ---------- | ---------- | -------- |

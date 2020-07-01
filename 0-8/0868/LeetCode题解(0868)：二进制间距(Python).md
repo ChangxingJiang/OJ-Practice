@@ -1,6 +1,6 @@
-# LeetCode题解(0728)：计算所有自除数(Python)
+# LeetCode题解(0868)：二进制间距(Python)
 
-题目：[原题链接](https://leetcode-cn.com/problems/self-dividing-numbers/)（简单）
+题目：[原题链接](https://leetcode-cn.com/problems/binary-gap/)（简单）
 
 | 解法           | 时间复杂度 | 空间复杂度 | 执行用时 |
 | -------------- | ---------- | ---------- | -------- |

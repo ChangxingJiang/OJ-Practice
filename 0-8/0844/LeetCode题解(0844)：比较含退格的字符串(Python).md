@@ -1,6 +1,6 @@
-# LeetCode题解(0744)：寻找比目标字母大的最小字母(Python)
+# LeetCode题解(0844)：比较含退格的字符串(Python)
 
-题目：[原题链接](https://leetcode-cn.com/problems/find-smallest-letter-greater-than-target/)（简单）
+题目：[原题链接](https://leetcode-cn.com/problems/backspace-string-compare/)（简单）
 
 | 解法           | 时间复杂度 | 空间复杂度 | 执行用时 |
 | -------------- | ---------- | ---------- | -------- |
