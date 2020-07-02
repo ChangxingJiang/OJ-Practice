@@ -3,7 +3,7 @@ from typing import List
 
 class Solution:
     def sortedSquares(self, A: List[int]) -> List[int]:
-        pass
+        return sorted([a * a for a in A])
 
 
 if __name__ == "__main__":
