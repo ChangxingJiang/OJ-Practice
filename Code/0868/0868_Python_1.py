@@ -1,6 +1,15 @@
 class Solution:
     def binaryGap(self, N: int) -> int:
-        pass
+        N = bin(N)
+
+        ans = 0
+        start = -1
+        for i in range(len(N)):
+            if N[i] == "1":
+                if start != -1:
+                    ans = max(ans, i - start)
+                start = i
+        return ans
 
 
 if __name__ == "__main__":
