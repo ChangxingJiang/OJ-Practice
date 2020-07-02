@@ -3,7 +3,11 @@ from typing import List
 
 class Solution:
     def reorderLogFiles(self, logs: List[str]) -> List[str]:
-        pass
+        def helper(log):
+            id_, content = log.split(" ", 1)
+            return (0, content, id_) if content[0].isalpha() else (1,)
+
+        return sorted(logs, key=helper)
 
 
 if __name__ == "__main__":
