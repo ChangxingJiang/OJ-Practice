@@ -3,7 +3,15 @@ from typing import List
 
 class Solution:
     def transpose(self, A: List[List[int]]) -> List[List[int]]:
-        pass
+        x = len(A)
+        y = len(A[0])
+        ans = []
+        for j in range(y):
+            line = []
+            for i in range(x):
+                line.append(A[i][j])
+            ans.append(line)
+        return ans
 
 
 if __name__ == "__main__":
