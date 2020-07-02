@@ -1,6 +1,21 @@
 class Solution:
     def backspaceCompare(self, S: str, T: str) -> bool:
-        pass
+        def helper(s):
+            ans = ""
+            skip = 0
+            for c in reversed(s):
+                if c == "#":
+                    skip += 1
+                elif skip > 0:
+                    skip -= 1
+                else:
+                    ans += c
+            return ans
+
+        S = helper(S)
+        T = helper(T)
+
+        return S == T
 
 
 if __name__ == "__main__":
