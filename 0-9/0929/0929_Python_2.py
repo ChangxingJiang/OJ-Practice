@@ -1,4 +1,3 @@
-import re
 from typing import List
 
 
@@ -6,10 +5,16 @@ class Solution:
     def numUniqueEmails(self, emails: List[str]) -> int:
         hashmap = set()
         for email in emails:
-            name, domain = email.split("@")
-            total = re.sub("\+.*$", "", name.replace(".", "")) + "@" + domain
-            if total not in hashmap:
-                hashmap.add(total)
+            idx = email.index("@")
+            real = ""
+            for n in email[:idx]:
+                if n == "+":
+                    break
+                elif n != ".":
+                    real += n
+            real += email[idx:]
+            if real not in hashmap:
+                hashmap.add(real)
         return len(hashmap)
 
 
