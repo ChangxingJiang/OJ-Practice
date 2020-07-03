@@ -1,6 +1,6 @@
 class Solution:
     def bitwiseComplement(self, N: int) -> int:
-        pass
+        return 2 ** (len(bin(N)) - 2) - 1 - N
 
 
 if __name__ == "__main__":

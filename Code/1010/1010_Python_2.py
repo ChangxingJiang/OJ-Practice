@@ -1,9 +1,16 @@
+import itertools
 from typing import List
 
 
 class Solution:
     def numPairsDivisibleBy60(self, time: List[int]) -> int:
-        pass
+        time = [t % 60 for t in time]
+        ans = 0
+        for pair in itertools.combinations(time, 2):
+            remainder = pair[0] + pair[1]
+            if remainder == 0 or remainder == 60:
+                ans += 1
+        return ans
 
 
 if __name__ == "__main__":

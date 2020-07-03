@@ -3,7 +3,12 @@ from typing import List
 
 class Solution:
     def prefixesDivBy5(self, A: List[int]) -> List[bool]:
-        pass
+        val = 0
+        ans = []
+        for a in A:
+            val = (val << 1) ^ a
+            ans.append(val % 5 == 0)
+        return ans
 
 
 if __name__ == "__main__":
