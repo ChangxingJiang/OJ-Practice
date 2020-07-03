@@ -1,4 +1,4 @@
-# LeetCode题解(0999)：可以被一步补货的棋子数(Python)
+# LeetCode题解(0999)：可以被一步捕获的棋子数(Python)
 
 题目：[原题链接](https://leetcode-cn.com/problems/available-captures-for-rook/)（简单）
 
