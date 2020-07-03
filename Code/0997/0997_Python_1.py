@@ -3,7 +3,15 @@ from typing import List
 
 class Solution:
     def findJudge(self, N: int, trust: List[List[int]]) -> int:
-        pass
+        maybe = [0 for _ in range(N)]
+        for t in trust:
+            maybe[t[0] - 1] -= 1
+            maybe[t[1] - 1] += 1
+        for i in range(N):
+            if maybe[i] == N-1:
+                return i+1
+        else:
+            return -1
 
 
 if __name__ == "__main__":

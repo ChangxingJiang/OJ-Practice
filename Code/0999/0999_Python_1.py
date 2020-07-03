@@ -3,7 +3,32 @@ from typing import List
 
 class Solution:
     def numRookCaptures(self, board: List[List[str]]) -> int:
-        pass
+        # 寻找白色车的位置
+        x = -1
+        y = -1
+        for i in range(8):
+            for j in range(8):
+                if board[i][j] == "R":
+                    x = i
+                    y = j
+                    break
+        if x == -1:
+            return 0
+
+        # 计算目标数量
+        ans = 0
+        for orient in [(0, 1), (1, 0), (0, -1), (-1, 0)]:
+            dx = x
+            dy = y
+            while 0 <= dx < 8 and 0 <= dy < 8:
+                if board[dx][dy] == "B":
+                    break
+                elif board[dx][dy] == "p":
+                    ans += 1
+                    break
+                dx += orient[0]
+                dy += orient[1]
+        return ans
 
 
 if __name__ == "__main__":

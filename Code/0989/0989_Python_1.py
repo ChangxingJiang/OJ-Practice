@@ -3,7 +3,24 @@ from typing import List
 
 class Solution:
     def addToArrayForm(self, A: List[int], K: int) -> List[int]:
-        pass
+        carry = 0
+        ans = []
+        while len(A) > 0 or K > 0 or carry > 0:
+            if len(A) > 0:
+                a = A.pop(-1)
+            else:
+                a = 0
+
+            if K > 0:
+                b = K % 10
+                K //= 10
+            else:
+                b = 0
+
+            t = a + b + carry
+            ans.append(t % 10)
+            carry = t // 10
+        return ans[::-1]
 
 
 if __name__ == "__main__":
