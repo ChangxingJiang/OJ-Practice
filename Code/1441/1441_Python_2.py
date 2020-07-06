@@ -3,7 +3,12 @@ from typing import List
 
 class Solution:
     def buildArray(self, target: List[int], n: int) -> List[str]:
-        pass
+        ans = []
+        last = 0
+        for t in target:
+            ans += ["Push", "Pop"] * (t - last - 1) + ["Push"]
+            last = t
+        return ans
 
 
 if __name__ == "__main__":

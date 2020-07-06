@@ -3,7 +3,8 @@ from typing import List
 
 class Solution:
     def kidsWithCandies(self, candies: List[int], extraCandies: int) -> List[bool]:
-        pass
+        limit = max(candies) - extraCandies
+        return [candy >= limit for candy in candies]
 
 
 if __name__ == "__main__":

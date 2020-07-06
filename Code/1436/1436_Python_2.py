@@ -3,7 +3,11 @@ from typing import List
 
 class Solution:
     def destCity(self, paths: List[List[str]]) -> str:
-        pass
+        paths = list(zip(*paths))
+        wrong = set(paths[0])
+        for path in paths[1]:
+            if path not in wrong:
+                return path
 
 
 if __name__ == "__main__":
