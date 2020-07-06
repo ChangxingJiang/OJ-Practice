@@ -3,7 +3,11 @@ from typing import List
 
 class Solution:
     def findTheDistanceValue(self, arr1: List[int], arr2: List[int], d: int) -> int:
-        pass
+        ans = 0
+        for a in arr1:
+            if all(abs(a - b) > d for b in arr2):
+                ans += 1
+        return ans
 
 
 if __name__ == "__main__":
