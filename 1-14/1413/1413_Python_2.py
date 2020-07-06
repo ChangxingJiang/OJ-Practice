@@ -3,12 +3,14 @@ from typing import List
 
 class Solution:
     def minStartValue(self, nums: List[int]) -> int:
-        minimum = 0
-        now = 0
+        ans = 1
+        now = 1
         for n in nums:
             now += n
-            minimum = min(minimum, now)
-        return 1 - minimum
+            if now < 1:
+                ans += 1 - now
+                now = 1
+        return ans
 
 
 if __name__ == "__main__":
