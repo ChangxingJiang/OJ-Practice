@@ -3,7 +3,10 @@ from typing import List
 
 class Solution:
     def decompressRLElist(self, nums: List[int]) -> List[int]:
-        pass
+        ans = []
+        for i in range(0, len(nums), 2):
+            ans += [nums[i + 1]] * nums[i]
+        return ans
 
 
 if __name__ == "__main__":
