@@ -1,6 +1,11 @@
 class Solution:
     def maximum69Number(self, num: int) -> int:
-        pass
+        s = str(num)
+        if "6" not in s:
+            return num
+        else:
+            i = s.index("6")
+            return num + 3 * (10 ** (len(s) - i - 1))
 
 
 if __name__ == "__main__":

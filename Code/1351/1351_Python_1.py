@@ -3,7 +3,21 @@ from typing import List
 
 class Solution:
     def countNegatives(self, grid: List[List[int]]) -> int:
-        pass
+        x = len(grid)
+        y = len(grid[0])
+        if grid[-1][-1] >= 0:
+            return 0
+        ans = 0
+        num = x
+        for j in range(1, y + 1):
+            for i in range(num, 0, -1):
+                if grid[-i][-j] < 0:
+                    ans += i
+                    num = i
+                    break
+            else:
+                break
+        return ans
 
 
 if __name__ == "__main__":

@@ -3,7 +3,16 @@ from typing import List
 
 class Solution:
     def smallerNumbersThanCurrent(self, nums: List[int]) -> List[int]:
-        pass
+        s = sorted(nums)
+        hashmap = {}
+        for i in range(len(s)):
+            if s[i] not in hashmap:
+                hashmap[s[i]] = i
+
+        ans = []
+        for n in nums:
+            ans.append(hashmap[n])
+        return ans
 
 
 if __name__ == "__main__":

@@ -1,5 +1,11 @@
 class Solution:
-    def removePalindromeSub(self, s: str) -> int: pass
+    def removePalindromeSub(self, s: str) -> int:
+        if "a" in s and "b" in s and s != s[::-1]:
+            return 2
+        elif len(s) > 0:
+            return 1
+        else:
+            return 0
 
 
 if __name__ == "__main__":

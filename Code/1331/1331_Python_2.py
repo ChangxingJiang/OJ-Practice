@@ -3,7 +3,12 @@ from typing import List
 
 class Solution:
     def arrayRankTransform(self, arr: List[int]) -> List[int]:
-        pass
+        hashmap = {}
+        srr = list(set(arr))
+        srr.sort()
+        for i in range(len(srr)):
+            hashmap[srr[i]] = i + 1
+        return [hashmap[a] for a in arr]
 
 
 if __name__ == "__main__":

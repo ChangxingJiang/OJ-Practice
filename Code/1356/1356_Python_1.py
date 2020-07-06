@@ -3,7 +3,10 @@ from typing import List
 
 class Solution:
     def sortByBits(self, arr: List[int]) -> List[int]:
-        pass
+        def helper(n):
+            return bin(n).count("1"), n
+
+        return sorted(arr, key=helper)
 
 
 if __name__ == "__main__":
