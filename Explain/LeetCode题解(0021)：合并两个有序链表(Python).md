@@ -1,13 +1,15 @@
 # LeetCode题解：0021（合并两个有序链表）
 
-[题目链接](https://leetcode-cn.com/problems/merge-two-sorted-lists/)（简单）
+题目：[题目链接](https://leetcode-cn.com/problems/merge-two-sorted-lists/)（简单）
 
-| 解法           | 执行用时       | 内存消耗        |
-| -------------- | -------------- | --------------- |
-| Ans 1 (Python) | 36ms (>97.41%) | 13.6MB (>7.14%) |
-| Ans 2 (Python) | 48ms (>54.92%) | 13.7MB (>7.14%) |
-| Ans 3 (Python) | 40ms (>90.66%) | 13.7MB (>7.14%) |
-| Ans 4 (Python) | 54ms (>31.14%) | 13.7MB (>7.14%) |
+标签：链表、链表-双链表、链表-头结点
+
+| 解法           | 执行用时       |
+| -------------- | -------------- |
+| Ans 1 (Python) | 36ms (>97.41%) |
+| Ans 2 (Python) | 48ms (>54.92%) |
+| Ans 3 (Python) | 40ms (>90.66%) |
+| Ans 4 (Python) | 44ms (>81.24%) |
 
 解法一（遍历两个链表并比较排序）：
 

@@ -1,11 +1,13 @@
 # LeetCode题解：0083（删除排序链表中的重复元素）
 
-[题目链接](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/)（简单）
+题目：[题目链接](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/)（简单）
 
-| 解法           | 执行用时       |
-| :------------- | -------------- |
-| Ans 1 (Python) | 44ms (>92.02%) |
-| Ans 2 (Python) | 44ms (>92.02%) |
+标签：链表、链表-头结点
+
+| 解法           | 时间复杂度 | 空间复杂度 | 执行用时       |
+| :------------- | ---------- | ---------- | -------------- |
+| Ans 1 (Python) | $O(N)$     | $O(N)$     | 44ms (>92.02%) |
+| Ans 2 (Python) | $O(N)$     | $O(1)$     | 44ms (>92.02%) |
 
 解法一（生成新的无重复链表）：
 

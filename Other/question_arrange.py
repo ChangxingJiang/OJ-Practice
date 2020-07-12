@@ -105,10 +105,12 @@ if __name__ == "__main__":
     translates = arrange_translate()
     labels = arrange_label()
 
-    for i in range(1, 1486):
-        num = str(i).zfill(4)  # 题目编号
-        if num not in problems:
-            continue
+    for num in problems:
+
+    # for i in range(1, 1486):
+    #     num = str(i).zfill(4)  # 题目编号
+    #     if num not in problems:
+    #         continue
 
         title = problems[num]["title"]
         url = problems[num]["url"]
@@ -128,4 +130,4 @@ if __name__ == "__main__":
         if id in labels:
             label = ",".join(labels[id])
 
-        print("| {} | [{}]({}) | {} | {} | {} |".format(num, title, url, level, label, paid))
+        print("\t".join([num, title, url, level, label, paid]))

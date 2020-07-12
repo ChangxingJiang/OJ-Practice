@@ -2,6 +2,8 @@
 
 题目：[原题链接](https://leetcode-cn.com/problems/delete-node-in-a-linked-list/)（简单）
 
+标签：链表
+
 | 解法           | 时间复杂度 | 空间复杂度 | 执行用时      |
 | -------------- | ---------- | ---------- | ------------- |
 | Ans 1 (Python) | O(1)       | O(1)       | 48s (>78.76%) |
@@ -12,10 +14,6 @@
 
 ```python
 def deleteNode(self, node):
-    """
-    :type node: ListNode
-    :rtype: void Do not return anything, modify node in-place instead.
-    """
     node.val = node.next.val
     node.next = node.next.next
 ```

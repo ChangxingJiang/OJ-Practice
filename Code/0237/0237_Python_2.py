@@ -3,11 +3,8 @@ from toolkit import ListNode
 
 class Solution:
     def deleteNode(self, node):
-        """
-        :type node: ListNode
-        :rtype: void Do not return anything, modify node in-place instead.
-        """
-        pass
+        node.val = node.next.val
+        node.next = node.next.next
 
 
 if __name__ == "__main__":

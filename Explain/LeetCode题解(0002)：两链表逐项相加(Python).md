@@ -1,39 +1,15 @@
 # LeetCode题解：0002（两数相加）
 
-[题目链接](https://leetcode-cn.com/problems/add-two-numbers/)（中等）
+题目：[原题链接](https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/)（中等）
 
-| 解法           | 执行用时       | 内存消耗        |
-| -------------- | -------------- | --------------- |
-| Ans 1 (Python) | 76ms (>60.58%) | 13.8MB (>5.13%) |
-| Ans 2 (Python) | 68ms (>88.91%) | 13.8MB (>5.13%) |
+标签：链表、链表-头结点、链表-双链表
 
-首先，我们先了解一下ListNode的结构：```["ListNode{val: 2, next: ListNode{val: 4, next: ListNode{val: 3, next: None}}}"]```
+| 解法           | 时间复杂度    | 空间复杂度    | 执行用时       |
+| -------------- | ------------- | ------------- | -------------- |
+| Ans 1 (Python) | $O(max(m,n))$ | $O(max(m,n))$ | 76ms (>60.58%) |
+| Ans 2 (Python) | $O(max(m,n))$ | $O(max(m,n))$ | 64ms (>96.98%) |
 
-参考[“娃哈哈店长”的题解](https://leetcode-cn.com/problems/add-two-numbers/solution/python3ti-jie-fang-leetcodeguan-fang-lei-listnoded/)，我们得到如下ListNode类的代码：
-
-```python
-class ListNode():
-    def __init__(self, val):
-        if isinstance(val,int):
-            self.val = val
-            self.next = None
-            
-        elif isinstance(val,list):
-            self.val = val[0]
-            self.next = None
-            cur = self
-            for i in val[1:]:
-                cur.next = ListNode(i)
-                cur = cur.next
-    
-    def gatherAttrs(self):
-        return ", ".join("{}: {}".format(k, getattr(self, k)) for k in self.__dict__.keys())
-
-    def __str__(self):
-            return self.__class__.__name__+" {"+"{}".format(self.gatherAttrs())+"}"
-```
-
-解法一（按位依次相加）：
+## 解法一（按位依次相加）：
 
 ```python
 def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
@@ -58,7 +34,7 @@ def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
     return ans
 ```
 
-解法二（优化代码结构）：
+## 解法二（优化代码结构）：
 
 ```python
 def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
@@ -74,5 +50,5 @@ def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
     return ans.next
 ```
 
-[Github](https://github.com/ChangxingJiang/LeetCode_Solution/tree/master/0002)
+
 

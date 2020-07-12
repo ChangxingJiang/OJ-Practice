@@ -1,11 +1,14 @@
 # LeetCode题解：0160（相交链表）
 
-[题目链接](https://leetcode-cn.com/problems/intersection-of-two-linked-lists/)（简单）
+题目：[题目链接](https://leetcode-cn.com/problems/intersection-of-two-linked-lists/)（简单）
 
-| 解法           | 执行用时        |
-| :------------- | --------------- |
-| Ans 1 (Python) | 216ms (>25.96%) |
-| Ans 2 (Python) | 184ms (>75.53%) |
+标签：链表、链表-相交链表、链表-双指针、链表-快慢针
+
+| 解法           | 时间复杂度 | 空间复杂度 | 执行用时       |
+| :------------- | ---------- | ---------- | -------------- |
+| Ans 1 (Python) | $O(N)$     | $O(N)$     | 216ms (25.96%) |
+| Ans 2 (Python) | $O(N)$     | $O(1)$     | 184ms (75.53%) |
+| Ans 2 (Python) | $O(N)$     | $O(1)$     | 180ms (84.94%) |
 
 解法一（使用Python的list直接实现）：
 
@@ -34,5 +37,14 @@ def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> ListNode:
         return nodeA
 ```
 
+解法三（双指针）：
 
+```python
+def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> ListNode:
+    nodeA, nodeB = headA, headB
+    while nodeA != nodeB:
+        nodeA = nodeA.next if nodeA else headB
+        nodeB = nodeB.next if nodeB else headA
+    return nodeA
+```
 

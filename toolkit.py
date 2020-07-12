@@ -60,14 +60,8 @@ class ListNode:
             node = node.next
         last_node.next = next_node
 
-    def gatherAttrs(self):
-        return ", ".join("{}: {}".format(k, getattr(self, k)) for k in self.__dict__.keys())
-
     def __str__(self):
-        if self._cycle:
-            return "Error - Found cycle in the ListNode"
-        else:
-            return self.__class__.__name__ + "{" + "{}".format(self.gatherAttrs()) + "}"
+        return str(self.val) + "->" + str(self.next)
 
 
 def build_ListNode_with_pos(val, pos=-1):

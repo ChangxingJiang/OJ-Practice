@@ -3,7 +3,13 @@ from toolkit import ListNode
 
 class Solution:
     def reverseList(self, head: ListNode) -> ListNode:
-        pass
+        ans = None
+        while head:
+            node = ListNode(head.val)
+            node.next = ans
+            ans = node
+            head = head.next
+        return ans
 
 
 if __name__ == "__main__":
