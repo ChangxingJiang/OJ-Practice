@@ -19,7 +19,7 @@ class ListNode:
             else:
                 self.val = val[0]
                 self.next = ListNode(val[1:])
-        elif isinstance(val, int) or isinstance(val, str):
+        elif isinstance(val, int) or isinstance(val, str) or isinstance(val, float):
             self.val = val
             self.next = None
 
