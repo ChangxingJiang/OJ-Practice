@@ -1,10 +1,13 @@
 # LeetCode题解：0020（有效的括号）
 
-[题目链接](https://leetcode-cn.com/problems/valid-parentheses/)（简单）
+题目：[题目链接](https://leetcode-cn.com/problems/valid-parentheses/)（简单）
 
-| 解法           | 执行用时       | 内存消耗        |
-| -------------- | -------------- | --------------- |
-| Ans 1 (Python) | 36ms (>89.92%) | 13.5MB (>5.22%) |
+标签：栈
+
+| 解法           | 时间复杂度 | 空间复杂度 | 执行用时      |
+| -------------- | ---------- | ---------- | ------------- |
+| Ans 1 (Python) | $O(N)$     | $O(N)$     | 36ms (89.92%) |
+| Ans 2 (Python) | $O(N)$     | $O(N)$     | 36ms (89.92%) |
 
 解法一（使用列表存储当前括号状态）：
 
@@ -33,3 +36,27 @@ def isValid(self, s: str) -> bool:
     else:
         return True
 ```
+
+解法二：
+
+```python
+def isValid(self, s: str) -> bool:
+    stack = []
+    for c in s:
+        if c == "(" or c == "[" or c == "{":
+            stack.append(c)
+        else:
+            if not stack:
+                return False
+            elif c == ")" and stack[-1] != "(":
+                return False
+            elif c == "]" and stack[-1] != "[":
+                return False
+            elif c == "}" and stack[-1] != "{":
+                return False
+            stack.pop()
+    return not stack
+```
+
+
+
