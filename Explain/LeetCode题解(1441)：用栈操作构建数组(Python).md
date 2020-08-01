@@ -2,6 +2,8 @@
 
 题目：[原题链接](https://leetcode-cn.com/problems/build-an-array-with-stack-operations/)（简单）
 
+标签：栈、情景模拟
+
 | 解法           | 时间复杂度             | 空间复杂度 | 执行用时      |
 | -------------- | ---------------------- | ---------- | ------------- |
 | Ans 1 (Python) | $O(N)$                 | $O(N)$     | 40ms (66.32%) |

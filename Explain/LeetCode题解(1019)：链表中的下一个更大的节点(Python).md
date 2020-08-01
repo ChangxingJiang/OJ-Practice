@@ -2,7 +2,7 @@
 
 题目：[原题链接](https://leetcode-cn.com/problems/next-greater-node-in-linked-list/)（中等）
 
-标签：链表、栈
+标签：链表、栈、栈-单调栈
 
 | 解法           | 时间复杂度 | 空间复杂度 | 执行用时       |
 | -------------- | ---------- | ---------- | -------------- |
@@ -12,7 +12,7 @@
 
 >  LeetCode的Python执行用时随缘，只要时间复杂度没有明显差异，执行用时一般都在同一个量级，仅作参考意义。
 
-解法一（栈）：
+解法一：
 
 ```python
 def nextLargerNodes(self, head: ListNode) -> List[int]:
@@ -49,3 +49,6 @@ def nextLargerNodes(self, head: ListNode) -> List[int]:
             values[i] = 0
     return values
 ```
+
+
+

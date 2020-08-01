@@ -5,11 +5,13 @@ from toolkit import ListNode
 
 class Solution:
     def nextLargerNodes(self, head: ListNode) -> List[int]:
+        # 将链表转换为列表
         values = []
         while head:
             values.append(head.val)
             head = head.next
 
+        # 逆序计算链表中的下一个更大结点
         stack = []
         for i in range(len(values) - 1, -1, -1):
             while stack and values[i] >= stack[-1]:

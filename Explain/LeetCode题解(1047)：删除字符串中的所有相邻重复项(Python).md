@@ -2,11 +2,13 @@
 
 题目：[原题链接](https://leetcode-cn.com/problems/remove-all-adjacent-duplicates-in-string/)（简单）
 
+标签：字符串、字符串-替换函数、栈、正则表达式、正则表达式-替换函数
+
 | 解法           | 时间复杂度 | 空间复杂度 | 执行用时       |
 | -------------- | ---------- | ---------- | -------------- |
 | Ans 1 (Python) | $O(N)$     | $O(N)$     | 104ms (35.00%) |
 | Ans 2 (Python) | $O(N^2)$   | $O(N)$     | 56ms  (99.29%) |
-| Ans 3 (Python) |            |            |                |
+| Ans 3 (Python) | --         | $O(N)$     | 52ms  (99.84%) |
 
 >  LeetCode的Python执行用时随缘，只要时间复杂度没有明显差异，执行用时一般都在同一个量级，仅作参考意义。
 
@@ -35,5 +37,16 @@ def removeDuplicates(self, S: str) -> str:
         for d in duplicates:
             S = S.replace(d, "")
 
+    return S
+```
+
+解法三（正则表达式）：
+
+```python
+def removeDuplicates(self, S: str) -> str:
+    last_length = -1
+    while len(S) != last_length:
+        last_length = len(S)
+        S = re.sub(r"(.)\1", "", S)
     return S
 ```

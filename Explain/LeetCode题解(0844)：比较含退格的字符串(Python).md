@@ -2,10 +2,12 @@
 
 题目：[原题链接](https://leetcode-cn.com/problems/backspace-string-compare/)（简单）
 
+标签：栈、字符串、字符串-双指针
+
 | 解法           | 时间复杂度                      | 空间复杂度                      | 执行用时      |
 | -------------- | ------------------------------- | ------------------------------- | ------------- |
 | Ans 1 (Python) | $O(S+T)$ : S和T为两字符串的长度 | $O(S+T)$ : S和T为两字符串的长度 | 32ms (96.65%) |
-| Ans 2 (Python) | $O(S+T)$ : S和T为两字符串的长度 | $O(S+T)$ : S和T为两字符串的长度 | 44ms (52.10%) |
+| Ans 2 (Python) | $O(S+T)$ : S和T为两字符串的长度 | $O(S+T)$ : S和T为两字符串的长度 | 40ms (77.12%) |
 | Ans 3 (Python) |                                 |                                 |               |
 
 >  LeetCode的Python执行用时随缘，只要时间复杂度没有明显差异，执行用时一般都在同一个量级，仅作参考意义。
@@ -14,23 +16,21 @@
 
 ```python
 def backspaceCompare(self, S: str, T: str) -> bool:
-    stack = []
+    stack1 = []
     for s in S:
         if s != "#":
-            stack.append(s)
+            stack1.append(s)
         else:
-            if len(stack) > 0:
-                stack.pop(-1)
-    S = "".join(stack)
-    stack = []
+            if len(stack1) > 0:
+                stack1.pop(-1)
+    stack2 = []
     for t in T:
         if t != "#":
-            stack.append(t)
+            stack2.append(t)
         else:
-            if len(stack) > 0:
-                stack.pop(-1)
-    T = "".join(stack)
-    return S == T
+            if len(stack2) > 0:
+                stack2.pop(-1)
+    return stack1 == stack2
 ```
 
 解法二（双指针）：
@@ -49,8 +49,5 @@ def backspaceCompare(self, S: str, T: str) -> bool:
                 ans += c
         return ans
 
-    S = helper(S)
-    T = helper(T)
-
-    return S == T
+    return helper(S) == helper(T)
 ```

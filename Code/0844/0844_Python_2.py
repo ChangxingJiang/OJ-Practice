@@ -12,10 +12,7 @@ class Solution:
                     ans += c
             return ans
 
-        S = helper(S)
-        T = helper(T)
-
-        return S == T
+        return helper(S) == helper(T)
 
 
 if __name__ == "__main__":
