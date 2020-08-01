@@ -1,24 +1,21 @@
 # LeetCode题解：0155（最小栈）
 
-[题目链接](https://leetcode-cn.com/problems/min-stack/)（简单）
+题目：[题目链接](https://leetcode-cn.com/problems/min-stack/)（简单）
 
-| 解法           | 执行用时        |
-| :------------- | --------------- |
-| Ans 1 (Python) | 704ms (>20.85%) |
-| Ans 2 (Python) | 76ms (>83.93%)  |
+标签：栈、设计
 
-解法一（使用Python的list直接实现）：
+| 解法           | 时间复杂度                                                   | 空间复杂度 | 执行用时        |
+| :------------- | ------------------------------------------------------------ | ---------- | --------------- |
+| Ans 1 (Python) | push = $O(1)$ ; pop = $O(1)$ ; top = $O(1)$ ; getMin = $O(logN)$ | $O(N)$     | 704ms (>20.85%) |
+| Ans 2 (Python) | push = $O(1)$ ; pop = $O(logN)$ ; top = $O(1)$ ; getMin = $O(1)$ | $O(N)$     | 64ms (>99.65%)  |
+
+解法一（使用Python的list直接实现，不符合题目要求）：
 
 ```python
 class MinStack:
 
     def __init__(self):
-        """
-        initialize your data structure here.
-        """
         self.nums = []
-        self.maximum = None
-        self.minimum = None
 
     def push(self, x: int) -> None:
         self.nums.append(x)
@@ -27,22 +24,18 @@ class MinStack:
         self.nums.pop(-1)
 
     def top(self) -> int:
-        if len(self.nums) >= 1:
-            return self.nums[-1]
+        return self.nums[-1]
 
     def getMin(self) -> int:
         return min(self.nums)
 ```
 
-解法二（同时存储栈和最小值）：
+解法二（同时存储栈和最小值，符合题目要求）：
 
 ```python
 class MinStack:
 
     def __init__(self):
-        """
-        initialize your data structure here.
-        """
         self.nums = []
         self.minimum = None
 
@@ -60,8 +53,7 @@ class MinStack:
                 self.minimum = None
 
     def top(self) -> int:
-        if len(self.nums) >= 1:
-            return self.nums[-1]
+        return self.nums[-1]
 
     def getMin(self) -> int:
         return self.minimum

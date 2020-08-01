@@ -1,12 +1,7 @@
 class MinStack:
 
     def __init__(self):
-        """
-        initialize your data structure here.
-        """
         self.nums = []
-        self.maximum = None
-        self.minimum = None
 
     def push(self, x: int) -> None:
         self.nums.append(x)
@@ -15,8 +10,7 @@ class MinStack:
         self.nums.pop(-1)
 
     def top(self) -> int:
-        if len(self.nums) >= 1:
-            return self.nums[-1]
+        return self.nums[-1]
 
     def getMin(self) -> int:
         return min(self.nums)

@@ -1,9 +1,6 @@
 class MinStack:
 
     def __init__(self):
-        """
-        initialize your data structure here.
-        """
         self.nums = []
         self.minimum = None
 
@@ -21,8 +18,7 @@ class MinStack:
                 self.minimum = None
 
     def top(self) -> int:
-        if len(self.nums) >= 1:
-            return self.nums[-1]
+        return self.nums[-1]
 
     def getMin(self) -> int:
         return self.minimum

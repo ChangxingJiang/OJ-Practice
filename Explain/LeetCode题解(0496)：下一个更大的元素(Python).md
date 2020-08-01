@@ -2,12 +2,12 @@
 
 题目：[原题链接](https://leetcode-cn.com/problems/next-greater-element-i/)（简单）
 
-题目标签：
+标签：栈、哈希表
 
 | 解法           | 时间复杂度 | 空间复杂度 | 执行用时       |
 | -------------- | ---------- | ---------- | -------------- |
-| Ans 1 (Python) | O(N^2)     | O(N)       | 128ms (13.04%) |
-| Ans 2 (Python) | O(M+N)     | O(N)       | 56ms (92.60%)  |
+| Ans 1 (Python) | $O(N^2)$   | $O(N)$     | 128ms (13.04%) |
+| Ans 2 (Python) | $O(M+N)$   | $O(N)$     | 56ms (92.60%)  |
 
 >  LeetCode的Python执行用时随缘，只要时间复杂度没有明显差异，执行用时一般都在同一个量级，仅作参考意义。
 
@@ -27,22 +27,24 @@ def nextGreaterElement(self, nums1: List[int], nums2: List[int]) -> List[int]:
     return ans
 ```
 
-解法二（单调栈）：
+解法二（栈实现）：
 
 ```python
 def nextGreaterElement(self, nums1: List[int], nums2: List[int]) -> List[int]:
-    block = []
+    # 生成下一个更大元素对应哈希表
     hashmap = {}
-    for n in nums2:
-        while len(block) > 0:
-            if n > block[-1]:
-                hashmap[block.pop(-1)] = n
+    stack = []
+    for num in nums2:
+        while stack:
+            if stack[-1] < num:
+                hashmap[stack.pop(-1)] = num
             else:
                 break
-        block.append(n)
-    else:
-        for n in block:
-            hashmap[n] = -1
+        stack.append(num)
+    for num in stack:
+        hashmap[num] = -1
 
-    return [hashmap[n] for n in nums1]
+    # 返回结果
+    return [hashmap[num] for num in nums1]
 ```
+

@@ -3,20 +3,21 @@ from typing import List
 
 class Solution:
     def nextGreaterElement(self, nums1: List[int], nums2: List[int]) -> List[int]:
-        block = []
+        # 生成下一个更大元素对应哈希表
         hashmap = {}
-        for n in nums2:
-            while len(block) > 0:
-                if n > block[-1]:
-                    hashmap[block.pop(-1)] = n
+        stack = []
+        for num in nums2:
+            while stack:
+                if stack[-1] < num:
+                    hashmap[stack.pop(-1)] = num
                 else:
                     break
-            block.append(n)
-        else:
-            for n in block:
-                hashmap[n] = -1
+            stack.append(num)
+        for num in stack:
+            hashmap[num] = -1
 
-        return [hashmap[n] for n in nums1]
+        # 返回结果
+        return [hashmap[num] for num in nums1]
 
 
 if __name__ == "__main__":
