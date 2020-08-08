@@ -11,7 +11,7 @@ class Solution:
 
 if __name__ == "__main__":
     print(Solution().simplifyPath("/home/"))  # "/home"
-    print(Solution().simplifyPath("../../3-栈/"))  # "/"
+    print(Solution().simplifyPath("../../B1-栈/"))  # "/"
     print(Solution().simplifyPath("/home//foo/"))  # "/home/foo"
     print(Solution().simplifyPath("/a/./b/../../c/"))  # "/c"
     print(Solution().simplifyPath("/a/../../b/../c//.//"))  # "/c"
