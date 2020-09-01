@@ -4,14 +4,20 @@
       <w>abcabcbb</w>
       <w>alnum</w>
       <w>bbbbb</w>
+      <w>bccb</w>
       <w>binery</w>
       <w>cpdomain</w>
       <w>cpdomains</w>
       <w>hashmap</w>
       <w>hashset</w>
+      <w>idxs</w>
       <w>leet</w>
+      <w>mult</w>
       <w>pwwkew</w>
       <w>vals</w>
+      <w>worddict</w>
+      <w>wordlist</w>
+      <w>wordset</w>
     </words>
   </dictionary>
 </component>

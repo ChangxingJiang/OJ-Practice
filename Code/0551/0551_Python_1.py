@@ -1,10 +1,6 @@
 class Solution:
     def checkRecord(self, s: str) -> bool:
-        if s.count("A") >= 2:
-            return False
-        if "LLL" in s:
-            return False
-        return True
+        return not s.count("A") >= 2 and not "LLL" in s
 
 
 if __name__ == "__main__":

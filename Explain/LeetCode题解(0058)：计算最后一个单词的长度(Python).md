@@ -1,11 +1,13 @@
-# LeetCode题解：0058（最后一个单词的长度）
+# LeetCode题解(0058)：字符串中最后一个单词的长度(Python)
 
-[题目链接](https://leetcode-cn.com/problems/length-of-last-word/)（简单）
+题目：[题目链接](https://leetcode-cn.com/problems/length-of-last-word/)（简单）
 
-| 解法           | 执行用时       |
-| :------------- | -------------- |
-| Ans 1 (Python) | 40ms (>65.82%) |
-| Ans 2 (Python) | 40ms (>65.82%) |
+标签：字符串
+
+| 解法           | 时间复杂度 | 空间复杂度 | 执行用时      |
+| :------------- | ---------- | ---------- | ------------- |
+| Ans 1 (Python) | --         | --         | 40ms (65.82%) |
+| Ans 2 (Python) | --         | --         | 36ms (86.50%) |
 
 解法一（使用split拆分）：
 

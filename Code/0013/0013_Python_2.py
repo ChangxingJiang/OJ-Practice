@@ -11,15 +11,14 @@ class Solution:
             "M": 1000
         }
 
-        o = 0  # 上一个字符
+        last = 0  # 上一个字符
         ans = 0  # 数值总计
-        for c in s:
-            n = number[c]
-            if o < n:
-                ans += n - 2 * o
-            else:
-                ans += n
-            o = n
+        for ch in s:
+            n = number[ch]
+            ans += n
+            if last < n:
+                ans -= 2 * last
+            last = n
         return ans
 
 

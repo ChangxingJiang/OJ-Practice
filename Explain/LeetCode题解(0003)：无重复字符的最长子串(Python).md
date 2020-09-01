@@ -1,11 +1,13 @@
-# LeetCode题解：0003（无重复字符的最长子串）
+# LeetCode题解(0003)：字符串中无重复字符的最长子串(Python)
 
-[题目链接](https://leetcode-cn.com/problems/add-two-numbers/)（中等）
+题目：[题目链接](https://leetcode-cn.com/problems/add-two-numbers/)（中等）
 
-| 解法           | 执行用时        | 内存消耗        |
-| -------------- | --------------- | --------------- |
-| Ans 1 (Python) | 3356ms (>5.01%) | 13.8MB (>5.88%) |
-| Ans 2 (Python) | 44ms (>99.97%)  | 13.7MB (>5.88%) |
+标签：字符串、双指针、哈希表、滑动窗口
+
+| 解法           | 时间复杂度 | 空间复杂度 | 执行用时        |
+| -------------- | ---------- | ---------- | --------------- |
+| Ans 1 (Python) | $O(N^2)$   | $O(N)$     | 3356ms (>5.01%) |
+| Ans 2 (Python) | $O(N)$     | $O(N)$     | 44ms (>99.97%)  |
 
 解法一（分别计算以每个字为起点的最长无重复子串）：
 
@@ -29,16 +31,15 @@ def lengthOfLongestSubstring(self, s: str) -> int:
 
 ```python
 def lengthOfLongestSubstring(self, s: str) -> int:
+    ans = 0
     hashmap = {}  # 距离当前位置最近的字符坐标
-    max_long = 0  # 最大长度
-    now_long = 0  # 当前位置长度
-    for i, c in enumerate(s):
-        now_long += 1
-        if c in hashmap and i - hashmap[c] < now_long:
-            now_long = i - hashmap[c]
-        hashmap[c] = i
-        if now_long > max_long:
-            max_long = now_long
-    return max_long
+    now = 0  # 当前长度
+    for i, ch in enumerate(s):
+        now += 1
+        if ch in hashmap:
+            now = min(now, i - hashmap[ch])
+        hashmap[ch] = i
+        ans = max(ans, now)
+    return ans
 ```
 

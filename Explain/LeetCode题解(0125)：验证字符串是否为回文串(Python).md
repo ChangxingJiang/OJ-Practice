@@ -1,11 +1,13 @@
-# LeetCode题解：0125（验证回文串）
+# LeetCode题解(0125)：验证是否为回文串(Python)
 
-[题目链接](https://leetcode-cn.com/problems/valid-palindrome/)（简单）
+题目：[题目链接](https://leetcode-cn.com/problems/valid-palindrome/)（简单）
 
-| 解法           | 执行用时       |
-| :------------- | -------------- |
-| Ans 1 (Python) | 40ms (>98.72%) |
-| Ans 2 (Python) | 64ms (>50.63%) |
+标签：字符串、双指针
+
+| 解法           | 时间复杂度 | 空间复杂度 | 执行用时      |
+| :------------- | ---------- | ---------- | ------------- |
+| Ans 1 (Python) | --         | --         | 40ms (98.72%) |
+| Ans 2 (Python) | $O(N)$     | $O(1)$     | 64ms (50.63%) |
 
 解法一（使用Python原生方法）：
 

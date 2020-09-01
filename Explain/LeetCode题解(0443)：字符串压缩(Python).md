@@ -2,12 +2,12 @@
 
 题目：[原题链接](https://leetcode-cn.com/problems/string-compression/)（简单）
 
+标签：字符串
+
 | 解法           | 时间复杂度 | 空间复杂度 | 执行用时      |
 | -------------- | ---------- | ---------- | ------------- |
-| Ans 1 (Python) | O(n)       | O(n)       | 92ms (20.75%) |
-| Ans 2 (Python) | O(n)       | O(n)       | 68ms (89.76%) |
-
->  LeetCode的Python执行用时随缘，只要时间复杂度没有明显差异，执行用时一般都在同一个量级，仅作参考意义。
+| Ans 1 (Python) | $O(N)$     | $O(N)$     | 92ms (20.75%) |
+| Ans 2 (Python) | $O(N)$     | $O(N)$     | 68ms (89.76%) |
 
 解法一：
 

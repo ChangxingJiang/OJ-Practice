@@ -1,16 +1,18 @@
-# LeetCode题解(0383)：字符串中是否包含指定字符(Python)
+# LeetCode题解(0383)：判断报纸中的字是否够写赎金信(Python)
 
 题目：[原题链接](https://leetcode-cn.com/problems/ransom-note/)（简单）
 
+标签：字符串、哈希表
+
 | 解法           | 时间复杂度 | 空间复杂度 | 执行用时      |
 | -------------- | ---------- | ---------- | ------------- |
-| Ans 1 (Python) | O(m+n)     | O(n)       | 72ms (51.08%) |
-| Ans 2 (Python) | O(m+n)     | O(1)       | 80ms (40.28%) |
-| Ans 3 (Python) | --         | O(1)       | 40ms (98.67%) |
+| Ans 1 (Python) | $O(M+N)$   | $O(N)$     | 72ms (51.08%) |
+| Ans 2 (Python) | $O(M+N)$   | $O(1)$     | 80ms (40.28%) |
+| Ans 3 (Python) | --         | $O(1)$     | 36ms (99.46%) |
 
 >  LeetCode的Python执行用时随缘，只要时间复杂度没有明显差异，执行用时一般都在同一个量级，仅作参考意义。
 
-解法一（哈希表实现）：
+解法一（哈希表）：
 
 ```python
 def canConstruct(self, ransomNote: str, magazine: str) -> bool:
@@ -35,7 +37,7 @@ def canConstruct(self, ransomNote: str, magazine: str) -> bool:
         return True
 ```
 
-解法二（24个字母是固定的）：
+解法二（依据字母使用列表存储数据）：
 
 ```python
 def canConstruct(self, ransomNote: str, magazine: str) -> bool:
@@ -56,6 +58,8 @@ def canConstruct(self, ransomNote: str, magazine: str) -> bool:
 ```
 
 解法三（直接从杂志中裁剪）：
+
+![LeetCode题解(0383)：截图1](LeetCode题解(0383)：截图1.png)
 
 ```python
 def canConstruct(self, ransomNote: str, magazine: str) -> bool:

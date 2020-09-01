@@ -1,14 +1,15 @@
-# LeetCode题解(0459)：判断字符串中是否有重复的子串(Python)
+# LeetCode题解(0459)：验证字符串是否由一个子串重复多次构成(Python)
 
 题目：[原题链接](https://leetcode-cn.com/problems/repeated-substring-pattern/)（简单）
 
-题目标签：
+题目标签：字符串、KMP算法
 
 | 解法           | 时间复杂度 | 空间复杂度 | 执行用时       |
 | -------------- | ---------- | ---------- | -------------- |
-| Ans 1 (Python) | O(n^2)     | O(1)       | 72ms (50.99%)  |
-| Ans 2 (Python) | O(n)       | O(1)       | 40ms (92.28%)  |
-| Ans 3 (Python) | O(n)       | O(n)       | 256ms (13.03%) |
+| Ans 1 (Python) | $O(N^2)$   | $O(1)$     | 72ms (50.99%)  |
+| Ans 2 (Python) | $O(N^2)$   | $O(1)$     | 40ms (92.28%)  |
+| Ans 3 (Python) | $O(N)$     | $O(N)$     | 256ms (13.03%) |
+| Ans 4 (Python) | $O(N)$     | $O(N)$     | 136ms (34.89%) |
 
 >  LeetCode的Python执行用时随缘，只要时间复杂度没有明显差异，执行用时一般都在同一个量级，仅作参考意义。
 
@@ -52,7 +53,7 @@ def repeatedSubstringPattern(self, s: str) -> bool:
         return False
 ```
 
-解法三（KMP）：
+解法三（KMP算法）：
 
 ```python
 def repeatedSubstringPattern(self, s: str) -> bool:
@@ -66,4 +67,26 @@ def repeatedSubstringPattern(self, s: str) -> bool:
             next[i] = j + 1
         print(next)
     return next[-1] >= 0 and size % (size - 1 - next[-1]) == 0
+```
+
+解法四（KMP算法2）：
+
+```python
+class Solution:
+    def repeatedSubstringPattern(self, s: str) -> bool:
+        N = len(s)
+        arr = [0] * N
+        i = 1
+        j = 0
+        while i < N:
+            if s[i] == s[j]:
+                j += 1
+                arr[i] = j
+                i += 1
+            else:
+                if j == 0:
+                    i += 1
+                else:
+                    j = arr[j - 1]
+        return arr[-1] > 0 and N % (N - arr[-1]) == 0
 ```

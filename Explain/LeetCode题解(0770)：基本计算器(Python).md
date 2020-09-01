@@ -1,4 +1,4 @@
-# LeetCode题解(0770)：基本计算器(Python)
+# LeetCode题解(0770)：处理未知数的多项式计算器(Python)
 
 题目：[原题链接](https://leetcode-cn.com/problems/basic-calculator-iv/)（困难）
 

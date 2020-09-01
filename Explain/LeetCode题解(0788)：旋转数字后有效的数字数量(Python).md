@@ -1,14 +1,14 @@
-# LeetCode题解(0788)：旋转数字后有效的数字数量(Python)
+# LeetCode题解(0788)：判断垂直旋转后仍有效的数字数量(Python)
 
 题目：[原题链接](https://leetcode-cn.com/problems/rotated-digits/)（简单）
+
+标签：字符串、进制计算
 
 | 解法           | 时间复杂度 | 空间复杂度 | 执行用时       |
 | -------------- | ---------- | ---------- | -------------- |
 | Ans 1 (Python) | $O(NlogN)$ | $O(logN)$  | 108ms (57.60%) |
 | Ans 2 (Python) | $O(NlogN)$ | $O(logN)$  | 104ms (62.36%) |
 | Ans 3 (Python) | $O(1)$     | $O(1)$     | 32ms (100.00%) |
-
->  LeetCode的Python执行用时随缘，只要时间复杂度没有明显差异，执行用时一般都在同一个量级，仅作参考意义。
 
 解法一（暴力算法）：
 

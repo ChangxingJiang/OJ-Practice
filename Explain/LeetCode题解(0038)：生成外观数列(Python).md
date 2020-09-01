@@ -1,12 +1,14 @@
-# LeetCode题解：0038（外观数列）
+# LeetCode题解(0038)：生成外观数列(Python)
 
-[题目链接](https://leetcode-cn.com/problems/count-and-say/)（简单）
+题目：[题目链接](https://leetcode-cn.com/problems/count-and-say/)（简单）
 
-| 解法           | 执行用时       |
-| -------------- | -------------- |
-| Ans 1 (Python) | 36ms (>97.26%) |
-| Ans 2 (Python) | 48ms (>59.31%) |
-| Ans 3 (Python) | 36ms (>97.26%) |
+标签：字符串
+
+|      解法      | 时间复杂度 | 空间复杂度 |   执行用时    |
+| :------------: | :--------: | :--------: | :-----------: |
+| Ans 1 (Python) |  $O(2^N)$  |   $O(N)$   | 36ms (97.26%) |
+| Ans 2 (Python) |  $O(2^N)$  |   $O(N)$   | 48ms (59.31%) |
+| Ans 3 (Python) |   $O(1)$   |   $O(1)$   | 36ms (97.26%) |
 
 解法一（循环处理）：
 

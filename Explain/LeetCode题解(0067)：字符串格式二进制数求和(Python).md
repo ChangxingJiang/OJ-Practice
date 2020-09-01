@@ -1,13 +1,16 @@
-# LeetCode题解：0067（二进制求和）
+# LeetCode题解(0067)：字符串表示的二进制求和(Python）
 
-[题目链接](https://leetcode-cn.com/problems/add-binary/)（简单）
+题目：[题目链接](https://leetcode-cn.com/problems/add-binary/)（简单）
 
-| 解法           | 执行用时       |
-| :------------- | -------------- |
-| Ans 1 (Python) | 44ms (>65.80%) |
-| Ans 2 (Python) | 40ms (>82.92%) |
+标签：字符串、数学
 
-解法一（转换为二进制数计算）：
+| 解法           | 时间复杂度 | 空间复杂度 | 执行用时      |
+| :------------- | ---------- | ---------- | ------------- |
+| Ans 1 (Python) | --         | --         | 44ms (65.80%) |
+| Ans 2 (Python) | $O(N)$     | $O(N)$     | 40ms (82.92%) |
+| Ans 3 (Python) | $O(N)$     | $O(N)$     | 36ms (94.93%) |
+
+解法一（捣蛋方法）：
 
 ```python
 def addBinary(self, a: str, b: str) -> str:
@@ -18,7 +21,7 @@ def addBinary(self, a: str, b: str) -> str:
     return str(s).replace("0b", "")
 ```
 
-解法二（硬解二进制）：
+解法二：
 
 ```python
 def addBinary(self, a: str, b: str) -> str:
@@ -51,4 +54,42 @@ def addBinary(self, a: str, b: str) -> str:
     if add == 1:
         s.insert(0, "1")
     return "".join(s)
+```
+
+解法三（优化解法二）：
+
+```python
+def addBinary(self, a: str, b: str) -> str:
+    a = [int(t) for t in a]
+    b = [int(t) for t in b]
+
+    N1 = len(a)
+    N2 = len(b)
+
+    ans = []
+    now = 0
+    for i in range(1, max(N1, N2) + 1):
+        # 计算当期数量
+        c = now
+        if i <= N1:
+            c += a[-i]
+        if i <= N2:
+            c += b[-i]
+
+        # 计算当前位及进位
+        if c == 0:
+            ans.append("0")
+            now = 0
+        elif c == 1:
+            ans.append("1")
+            now = 0
+        elif c == 2:
+            ans.append("0")
+            now = 1
+        else:
+            ans.append("1")
+            now = 1
+    if now == 1:
+        ans.append("1")
+    return "".join(ans[::-1])
 ```

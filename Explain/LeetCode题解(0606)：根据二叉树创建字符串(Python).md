@@ -2,6 +2,8 @@
 
 题目：[原题链接](https://leetcode-cn.com/problems/construct-string-from-binary-tree/)（简单）
 
+标签：字符串、树、二叉树
+
 | 解法           | 时间复杂度 | 空间复杂度 | 执行用时       |
 | -------------- | ---------- | ---------- | -------------- |
 | Ans 1 (Python) | $O(N)$     | $O(N)$     | 48ms (100.00%) |
