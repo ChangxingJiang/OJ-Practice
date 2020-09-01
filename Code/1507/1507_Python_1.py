@@ -1,6 +1,8 @@
 class Solution:
     def reformatDate(self, date: str) -> str:
-        pass
+        day, month, year = date.split()
+        month = str(["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"].index(month) + 1).zfill(2)
+        return "-".join([year, month, day[:-2].zfill(2)])
 
 
 if __name__ == "__main__":

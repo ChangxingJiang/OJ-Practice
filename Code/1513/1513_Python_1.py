@@ -1,6 +1,15 @@
 class Solution:
     def numSub(self, s: str) -> int:
-        pass
+        MOD = 10 ** 9 + 7
+        now = 0
+        ans = 0
+        for ch in s:
+            if ch == "1":
+                now += 1
+                ans += now
+            else:
+                now = 0
+        return ans % MOD
 
 
 if __name__ == "__main__":

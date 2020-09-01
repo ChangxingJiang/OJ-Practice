@@ -1,6 +1,12 @@
 class Solution:
     def minFlips(self, target: str) -> int:
-        pass
+        ans = 0
+        now = "0"
+        for ch in target:
+            if ch != now:
+                now = ch
+                ans += 1
+        return ans
 
 
 if __name__ == "__main__":
