@@ -29,6 +29,8 @@
 * `0 <= nums.length <= 100`
 * `0 <= nums[i] <= 400`
 
+标签：动态规划
+
 > 来源：力扣（LeetCode）
 > 链接：https://leetcode-cn.com/problems/house-robber
 > 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
@@ -40,8 +42,6 @@
 | Ans 1 (Python) | 超出时间限制   |
 | Ans 2 (Python) | 32ms (>96.24%) |
 | Ans 3 (Python) | 40ms (>68.74%) |
-
-> LeetCode的Python执行用时随缘，只要时间复杂度没有明显差异，执行用时一般都在同一个量级，仅作参考意义。
 
 #### 解法一（动态规划）：
 

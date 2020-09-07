@@ -29,6 +29,8 @@
 * 如果 nums1 的大小比 nums2 小很多，哪种方法更优？
 * 如果 nums2 的元素存储在磁盘上，磁盘内存是有限的，并且你不能一次加载所有的元素到内存中，你该怎么办？
 
+数据：排序、二分查找、哈希表、双指针
+
 > 来源：力扣（LeetCode）
 > 链接：https://leetcode-cn.com/problems/intersection-of-two-arrays-ii
 
@@ -39,8 +41,6 @@
 | Ans 1 (Python) | O(n+m)         | O(n+m)      | 56ms (91.11%) |
 | Ans 2 (Python) | O(n+m)         | O(min(n,m)) | 52ms (96.55%) |
 | Ans 3 (Python) | O(nlogn+mlogm) | O(1)        | 56ms (91.11%) |
-
->  LeetCode的Python执行用时随缘，只要时间复杂度没有明显差异，执行用时一般都在同一个量级，仅作参考意义。
 
 ### 解法一（双哈希表）：
 
