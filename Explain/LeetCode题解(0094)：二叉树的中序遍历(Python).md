@@ -17,7 +17,7 @@
 ```python
 def inorderTraversal(self, root: TreeNode) -> List[int]:
     if root:
-        return self.inorderTraversal(root.left) + [root.val] + self.inorderTraversal(root.right)
+        return self.inorder_traversal_to_iter(root.left) + [root.val] + self.inorder_traversal_to_iter(root.right)
     else:
         return []
 ```
