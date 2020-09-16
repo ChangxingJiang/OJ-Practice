@@ -1,6 +1,6 @@
-# LeetCode题解(Offer52)：两个链表的第一个公共节点(Python)
+# LeetCode题解(Offer34)：二叉树中和为某一值的路径(Python)
 
-题目：[原题链接](https://leetcode-cn.com/problems/liang-ge-lian-biao-de-di-yi-ge-gong-gong-jie-dian-lcof/)（简单）
+题目：[原题链接](https://leetcode-cn.com/problems/er-cha-shu-zhong-he-wei-mou-yi-zhi-de-lu-jing-lcof/)（中等）
 
 标签：
 

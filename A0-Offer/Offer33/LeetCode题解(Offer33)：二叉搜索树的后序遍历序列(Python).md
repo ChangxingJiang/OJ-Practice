@@ -1,6 +1,6 @@
-# LeetCode题解(Offer52)：两个链表的第一个公共节点(Python)
+# LeetCode题解(Offer33)：二叉搜索树的后序遍历序列(Python)
 
-题目：[原题链接](https://leetcode-cn.com/problems/liang-ge-lian-biao-de-di-yi-ge-gong-gong-jie-dian-lcof/)（简单）
+题目：[原题链接](https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-hou-xu-bian-li-xu-lie-lcof/)（中等）
 
 标签：
 

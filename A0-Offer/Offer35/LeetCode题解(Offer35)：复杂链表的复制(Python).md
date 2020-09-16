@@ -1,8 +1,10 @@
-# LeetCode题解(Offer52)：两个链表的第一个公共节点(Python)
+# LeetCode题解(Offer35)：复杂链表的复制(Python)
 
-题目：[原题链接](https://leetcode-cn.com/problems/liang-ge-lian-biao-de-di-yi-ge-gong-gong-jie-dian-lcof/)（简单）
+题目：[原题链接](https://leetcode-cn.com/problems/fu-za-lian-biao-de-fu-zhi-lcof/)（中等）
 
 标签：
+
+说明：与题目0138相同
 
 | 解法           | 时间复杂度 | 空间复杂度 | 执行用时 |
 | -------------- | ---------- | ---------- | -------- |
