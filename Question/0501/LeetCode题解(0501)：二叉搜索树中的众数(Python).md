@@ -44,7 +44,7 @@ def findMode(self, root: TreeNode) -> List[int]:
 ```python
 def __init__(self):
     self.max_counter = 0
-    self.now = None
+    self._now = None
     self.counter = 0
 
 def findMode(self, root: TreeNode) -> List[int]:
@@ -57,11 +57,11 @@ def findMode(self, root: TreeNode) -> List[int]:
 
         helper(node.left)
 
-        if node.val == self.now:
+        if node.val == self._now:
             self.counter += 1
         else:
             self.counter = 0
-            self.now = node.val
+            self._now = node.val
 
         if self.counter > self.max_counter:
             self.max_counter = self.counter
