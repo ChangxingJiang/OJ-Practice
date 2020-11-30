@@ -4,11 +4,21 @@
 
 标签：SQL
 
-| 解法           | 时间复杂度 | 空间复杂度 | 执行用时 |
-| -------------- | ---------- | ---------- | -------- |
-| Ans 1 (Python) |            |            |          |
-| Ans 2 (Python) |            |            |          |
-| Ans 3 (Python) |            |            |          |
+| 解法           | 时间复杂度 | 空间复杂度 | 执行用时       |
+| -------------- | ---------- | ---------- | -------------- |
+| Ans 1 (Python) |            |            | 195ms (30.51%) |
+| Ans 2 (Python) |            |            |                |
+| Ans 3 (Python) |            |            |                |
 
 解法一：
 
+```mysql
+SELECT employee_id
+FROM Employees
+WHERE manager_id IN (SELECT employee_id
+                     FROM Employees
+                     WHERE manager_id IN (SELECT employee_id
+                                          FROM Employees
+                                          WHERE manager_id = 1))
+  AND employee_id != 1;
+```
