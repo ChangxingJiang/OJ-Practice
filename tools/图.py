@@ -10,6 +10,15 @@ def build_graph_set(edges):
     return graph
 
 
+# 生成无向图加权中边的集合表示
+def build_graph_set_p(edges):
+    graph = collections.defaultdict(dict)
+    for edge in edges:
+        graph[edge[0]][edge[1]] = edge[2]
+        graph[edge[1]][edge[0]] = edge[2]
+    return graph
+
+
 # 生成有向图中边的集合表示
 def build_graph_set_d(edges):
     graph = collections.defaultdict(set)
