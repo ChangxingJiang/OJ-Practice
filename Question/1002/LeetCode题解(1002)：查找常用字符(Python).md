@@ -23,7 +23,7 @@ def commonChars(self, A: List[str]) -> List[str]:
 
     for a in A[1:]:
         for k in hashmap:
-            hashmap[k] = min(hashmap[k], a.count(k))
+            hashmap[k] = min(hashmap[k], a.count1(k))
 
     ans = []
     for k, v in hashmap.items():

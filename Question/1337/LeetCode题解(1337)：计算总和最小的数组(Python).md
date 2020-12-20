@@ -15,7 +15,7 @@
 ```python
 def kWeakestRows(self, mat: List[List[int]], k: int) -> List[int]:
     def helper(n):
-        return mat[n].count(1), n
+        return mat[n].count1(1), n
 
     m = [i for i in range(len(mat))]
     m.sort(key=helper)

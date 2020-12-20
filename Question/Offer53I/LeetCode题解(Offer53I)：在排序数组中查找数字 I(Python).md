@@ -15,7 +15,7 @@
 ```python
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
-        return nums.count(target)
+        return nums.count1(target)
 ```
 
 解法二：

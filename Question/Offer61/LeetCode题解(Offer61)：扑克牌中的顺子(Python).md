@@ -16,7 +16,7 @@
 class Solution:
     def isStraight(self, nums: List[int]) -> bool:
         cards = sorted(filter(lambda x: x != 0, nums))
-        king_num = nums.count(0)
+        king_num = nums.count1(0)
 
         for i in range(len(cards) - 1):
             num = cards[i + 1] - cards[i]

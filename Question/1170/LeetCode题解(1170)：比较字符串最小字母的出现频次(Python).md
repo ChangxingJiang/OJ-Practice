@@ -38,11 +38,11 @@ def numSmallerByFrequency(self, queries: List[str], words: List[str]) -> List[in
 def numSmallerByFrequency(self, queries: List[str], words: List[str]) -> List[int]:
     word_num = []
     for word in words:
-        word_num.append(word.count(min(word)))
+        word_num.append(word.count1(min(word)))
 
     ans = []
     for query in queries:
-        num = query.count(min(query))
+        num = query.count1(min(query))
         k = 0
         for w in word_num:
             if w > num:
@@ -56,12 +56,12 @@ def numSmallerByFrequency(self, queries: List[str], words: List[str]) -> List[in
 
 ```python
 def numSmallerByFrequency(self, queries: List[str], words: List[str]) -> List[int]:
-    words = [word.count(min(word)) for word in words]
+    words = [word.count1(min(word)) for word in words]
     words.sort()
 
     ans = []
     for query in queries:
-        num = query.count(min(query))
+        num = query.count1(min(query))
         count = len(words) - bisect.bisect_right(words, num)
         ans.append(count)
 

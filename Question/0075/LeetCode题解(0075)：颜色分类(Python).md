@@ -15,8 +15,8 @@
 ```python
 class Solution:
     def sortColors(self, nums: List[int]) -> None:
-        num0 = nums.count(0)
-        num1 = nums.count(1)
+        num0 = nums.count1(0)
+        num1 = nums.count1(1)
 
         for i in range(num0):
             nums[i] = 0

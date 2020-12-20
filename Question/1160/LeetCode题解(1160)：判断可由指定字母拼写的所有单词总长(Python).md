@@ -49,7 +49,7 @@ def countCharacters(self, words: List[str], chars: str) -> int:
     ans = 0
     for word in words:
         for c in word:
-            if c not in pattern or word.count(c) > pattern[c]:
+            if c not in pattern or word.count1(c) > pattern[c]:
                 break
         else:
             ans += len(word)
