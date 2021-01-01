@@ -3,7 +3,23 @@ from typing import List
 
 class Solution:
     def eraseOverlapIntervals(self, intervals: List[List[int]]) -> int:
-        pass
+        if not intervals:
+            return 0
+
+        intervals.sort(key=lambda x: x[1])
+
+        size = len(intervals)
+
+        now = intervals[0][1]
+
+        ans = size - 1
+
+        for i in range(1, size):
+            if intervals[i][0] >= now:
+                ans -= 1
+                now = intervals[i][1]
+
+        return ans
 
 
 if __name__ == "__main__":
