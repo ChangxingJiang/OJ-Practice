@@ -168,10 +168,21 @@ class Solution:
 
 
 if __name__ == "__main__":
-    print(Solution().getMaxGridHappiness(m=2, n=3, introvertsCount=1, extrovertsCount=2))  # 240
-    print(Solution().getMaxGridHappiness(m=3, n=1, introvertsCount=2, extrovertsCount=1))  # 260
-    print(Solution().getMaxGridHappiness(m=2, n=2, introvertsCount=4, extrovertsCount=0))  # 240
-    print(Solution().getMaxGridHappiness(m=2, n=1, introvertsCount=2, extrovertsCount=1))  # 180
-    print(Solution().getMaxGridHappiness(m=4, n=2, introvertsCount=3, extrovertsCount=4))  # 590
-    print(Solution().getMaxGridHappiness(m=3, n=1, introvertsCount=1, extrovertsCount=3))  # 230
-    print(Solution().getMaxGridHappiness(m=3, n=3, introvertsCount=2, extrovertsCount=2))  # 360
+    # 测试用例
+    print(240, "->", Solution().getMaxGridHappiness(m=2, n=3, introvertsCount=1, extrovertsCount=2))  # 240
+    print(260, "->", Solution().getMaxGridHappiness(m=3, n=1, introvertsCount=2, extrovertsCount=1))  # 260
+    print(240, "->", Solution().getMaxGridHappiness(m=2, n=2, introvertsCount=4, extrovertsCount=0))  # 240
+    print(180, "->", Solution().getMaxGridHappiness(m=2, n=1, introvertsCount=2, extrovertsCount=1))  # 180
+    print(590, "->", Solution().getMaxGridHappiness(m=4, n=2, introvertsCount=3, extrovertsCount=4))  # 590
+    print(230, "->", Solution().getMaxGridHappiness(m=3, n=1, introvertsCount=1, extrovertsCount=3))  # 230
+    print(350, "->", Solution().getMaxGridHappiness(m=3, n=3, introvertsCount=2, extrovertsCount=2))  # 350
+
+    # 自制用例
+    print(620, "->", Solution().getMaxGridHappiness(m=3, n=3, introvertsCount=1, extrovertsCount=5))  # 520
+    print(620, "->", Solution().getMaxGridHappiness(m=3, n=3, introvertsCount=5, extrovertsCount=2))  # 620
+    print(640, "->", Solution().getMaxGridHappiness(m=3, n=3, introvertsCount=5, extrovertsCount=3))  # 640
+    print(700, "->", Solution().getMaxGridHappiness(m=3, n=3, introvertsCount=5, extrovertsCount=4))  # 700
+    print(320, "->", Solution().getMaxGridHappiness(m=2, n=2, introvertsCount=6, extrovertsCount=6))  # 320
+    print(350, "->", Solution().getMaxGridHappiness(m=5, n=1, introvertsCount=2, extrovertsCount=2))  # 350
+    print(1230, "->", Solution().getMaxGridHappiness(m=5, n=4, introvertsCount=6, extrovertsCount=6))  # 1230
+    print(400, "->", Solution().getMaxGridHappiness(m=4, n=2, introvertsCount=3, extrovertsCount=1))  # 400

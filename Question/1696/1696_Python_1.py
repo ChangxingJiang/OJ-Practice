@@ -1,4 +1,4 @@
-import collections
+import heapq
 from typing import List
 
 
@@ -6,36 +6,39 @@ class Solution:
     def maxResult(self, nums: List[int], k: int) -> int:
         size = len(nums)
 
-        window = collections.deque([nums[0]])
-        max_val = nums[0]
+        if len(nums) == 1:
+            return sum(nums)
 
-        for i in range(1, size):
+        heap = [(-nums[0], 0)]
+
+        for i in range(1, size - 1):
             num = nums[i]
-            val1 = window[0] + num
-            window.append(val1)
 
-            # 处理新添加的值就是最大值的情况
-            if val1 >= max_val:
-                max_val = val1
-                window.clear()
-                window.append(val1)
+            while i - heap[0][1] > k:
+                heapq.heappop(heap)
 
-            # 处理窗口长度达到目标最大值的情况
-            elif len(window) > k:
-                val = window.popleft()
+            heapq.heappush(heap, (heap[0][0] - num, i))
 
-                if val == max_val:
-                    max_val = max(window)
-                    while window and window[0] != max_val:
-                        window.popleft()
+        while (size - 1) - heap[0][1] > k:
+            heapq.heappop(heap)
 
-        return window[-1]
+        return -heap[0][0] + nums[-1]
 
 
 if __name__ == "__main__":
-    print(Solution().maxResult(nums=[1, -1, -2, 4, -7, 3], k=2))  # 7
-    print(Solution().maxResult(nums=[10, -5, -2, 4, 0, 3], k=3))  # 17
-    print(Solution().maxResult(nums=[1, -5, -20, 4, -1, 3, -6, -3], k=2))  # 0
+    # -3
+    print(Solution().maxResult(nums=[-1] * 100, k=70))
+
+    # 7
+    print(Solution().maxResult(nums=[1, -1, -2, 4, -7, 3], k=2))
+
+    # 17
+    print(Solution().maxResult(nums=[10, -5, -2, 4, 0, 3], k=3))
+
+    # 0
+    print(Solution().maxResult(nums=[1, -5, -20, 4, -1, 3, -6, -3], k=2))
+
+    # 2354241
     print(Solution().maxResult(
         nums=[-5582, -5317, 6711, -639, 1001, 1845, 1728, -4575, -6066, -7770, 128, -3254, 7281, 3966, 6857, 5477, 8968,
               -1771, 9986, -6267, 9010, -764, 8413, -8154, 1087, -1107, 4183, 3033, 58, 659, 4625, 2825, 5031, 6811,
@@ -94,4 +97,4 @@ if __name__ == "__main__":
               -727, 8242, 4957, -7175, 4064, -9911, 4995, 9725, 1634, -4275, 788, -4920, 3831, -3525, -4467, 2909,
               -1200, 5377, -4905, -3077, -1763, 4443, -3518, 3134, -5595, 5409, 5943, 6757, 3485, 2883, -9261, -7221,
               654, 2001, -926, 7840, -5568, 2715, -7053, -2082, -2005, 7607, -9511, 7545, 7564, 2380, -7257, 1449,
-              -3918, -3240, -1928, -6555, -4784, 1550, 2745, -5316], k=56))  # 2354241
+              -3918, -3240, -1928, -6555, -4784, 1550, 2745, -5316], k=56))
