@@ -1,6 +1,9 @@
 class Solution:
     def minInteger(self, num: str, k: int) -> str:
-        pass
+        count = [[] for _ in range(10)]
+        for i, ch in enumerate(num):
+            count[int(ch)].append(i)
+        print(count)
 
 
 if __name__ == "__main__":
