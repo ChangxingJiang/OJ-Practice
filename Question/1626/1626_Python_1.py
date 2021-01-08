@@ -3,7 +3,20 @@ from typing import List
 
 class Solution:
     def bestTeamScore(self, scores: List[int], ages: List[int]) -> int:
-        pass
+        size = len(scores)
+
+        lst = [(ages[i], scores[i]) for i in range(size)]
+        lst.sort()
+
+        dp = [0] * size
+
+        for i in range(size):
+            for j in range(i):
+                if lst[i][0] == lst[j][0] or lst[i][1] >= lst[j][1]:
+                    dp[i] = max(dp[i], dp[j])
+            dp[i] += lst[i][1]
+
+        return max(dp)
 
 
 if __name__ == "__main__":

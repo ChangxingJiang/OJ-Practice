@@ -1,6 +1,6 @@
-# LeetCode题解(1626)：无矛盾的最佳球队(Python)
+# LeetCode题解(1579)：保证图可完全遍历(Python)
 
-题目：[原题链接](https://leetcode-cn.com/problems/best-team-with-no-conflicts/)（中等）
+题目：[原题链接](https://leetcode-cn.com/problems/remove-max-number-of-edges-to-keep-graph-fully-traversable/)（困难）
 
 标签：
 
