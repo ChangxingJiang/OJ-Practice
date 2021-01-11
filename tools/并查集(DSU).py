@@ -48,11 +48,11 @@ class DSU:
 
     def group_num(self):
         """计算当前的连通分支数量"""
-        group = set()
+        groups = set()
         for i in range(len(self.array)):
-            if self.array[i] not in group and self.find(i) not in group:
-                group.add(self.find(i))
-        return len(group)
+            if self.array[i] not in groups and self.find(i) not in groups:
+                groups.add(self.find(i))
+        return len(groups)
 
     def __repr__(self):
         return str(len(self.array)) + ":" + str(self.array)
