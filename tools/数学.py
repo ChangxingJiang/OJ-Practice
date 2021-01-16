@@ -10,6 +10,18 @@ def get_factor(x):
     return factor
 
 
+# 获取所有因子
+def factors(n):
+    k = 1
+    while k * k < n:
+        if n % k == 0:
+            yield k
+            yield n // k
+        k += 1
+    if k * k == n:
+        yield k
+
+
 # 已知每个值的分布数时计算中位数
 def get_median(lst):
     vv = sum(lst)
