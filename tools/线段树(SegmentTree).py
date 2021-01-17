@@ -113,14 +113,3 @@ class SegmentTree(object):
             l >>= 1
             r >>= 1
         return ans
-
-
-if __name__ == "__main__":
-    def sum_(a, b):
-        return a + b
-
-
-    st = SegmentTree(8, sum_, sum_)
-    print(st.update(3, 5, 1))
-    # print(st.query(2, 5))
-    # print(st.query(3, 5))
