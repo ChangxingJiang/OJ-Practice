@@ -69,6 +69,9 @@ class DSU2:
         self._parent = {}
         self._size = {}
 
+    def __contains__(self, i):
+        return i in self._parent
+
     def add(self, i):
         if i not in self._parent:
             self._parent[i] = i
