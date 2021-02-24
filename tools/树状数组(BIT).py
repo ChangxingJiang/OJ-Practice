@@ -40,7 +40,29 @@ LeetCode 0315 = 标准树状数组
 """
 
 
-class BIT:
+class BIT1:
+    def __init__(self, n):
+        self.n = n
+        self.a = [0] * (n + 1)
+
+    @staticmethod
+    def lowbit(x):
+        return x & (-x)
+
+    def query(self, x):
+        ret = 0
+        while x > 0:
+            ret += self.a[x]
+            x -= BIT1.lowbit(x)
+        return ret
+
+    def update(self, x, dt):
+        while x <= self.n:
+            self.a[x] += dt
+            x += BIT1.lowbit(x)
+
+
+class BIT2:
     def __init__(self, n: int):
         self.n = n
         self._tree = [0] * (n + 1)
@@ -55,13 +77,13 @@ class BIT:
     def add(self, i: int, x: int):
         while i <= self.n:
             self._tree[i] += x
-            i += BIT._lowbit(i)
+            i += BIT2._lowbit(i)
 
     def query(self, i: int) -> int:
         ans = 0
         while i > 0:
             ans += self._tree[i]
-            i -= BIT._lowbit(i)
+            i -= BIT2._lowbit(i)
         return ans
 
     def range_query(self, l: int, r: int) -> int:

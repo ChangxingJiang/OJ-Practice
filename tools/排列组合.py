@@ -1,3 +1,9 @@
+# 组合
+from scipy.special import comb
+
+comb(3, 2)  # C23
+
+
 # ---------- 生成所有不同的全排列(0047题) ----------
 def permuteUnique(nums):
     visited = set()

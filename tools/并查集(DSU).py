@@ -19,7 +19,7 @@
 DSU1(n) 构造长度为n的并查集实例
 find(i) 查询i所属的连通分支
 union(i,j) 合并i和j的连通分支
-group_num() 计算当前的连通分支数量
+group_num 计算当前的连通分支数量
 
 【变长并查集(DSU2)方法说明】
 DSU2() 构造并查集实例
@@ -36,28 +36,29 @@ class DSU1:
         self._array = [i for i in range(n)]
         self._size = [1] * n
 
-    def find(self, i: int):
+        self.group_num = n  # 连通分支数量
+
+    def find(self, i: int) -> int:
         if self._array[i] != i:
             self._array[i] = self.find(self._array[i])
         return self._array[i]
 
-    def union(self, i: int, j: int):
+    def union(self, i: int, j: int) -> bool:
         i, j = self.find(i), self.find(j)
-        if self._size[i] >= self._size[j]:
-            self._array[j] = i
-            self._size[i] += self._size[j]
+        if i != j:
+            if self._size[i] >= self._size[j]:
+                self._array[j] = i
+                self._size[i] += self._size[j]
+            else:
+                self._array[i] = j
+                self._size[j] += self._size[i]
+            self.group_num -= 1
+            return True
         else:
-            self._array[i] = j
-            self._size[j] += self._size[i]
+            return False
 
-    def group_num(self):
-        groups = set()
-        for i in range(len(self._array)):
-            if self._array[i] not in groups:
-                j = self.find(i)
-                if j not in groups:
-                    groups.add(self.find(i))
-        return len(groups)
+    def is_connected(self, i: int, j: int) -> bool:
+        return self.find(i) == self.find(j)
 
     def __repr__(self):
         return str(len(self._array)) + ":" + str(self._array)

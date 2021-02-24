@@ -2,7 +2,7 @@ import collections
 
 
 # 生成无向图中边的邻接列表结构
-def build_graph_set(edges):
+def build_graph_1(edges):
     graph = collections.defaultdict(set)
     for edge in edges:
         graph[edge[0]].add(edge[1])
@@ -11,7 +11,7 @@ def build_graph_set(edges):
 
 
 # 生成无向图加权中边的邻接列表结构
-def build_graph_set_p(edges):
+def build_graph_2(edges):
     graph = collections.defaultdict(dict)
     for edge in edges:
         graph[edge[0]][edge[1]] = edge[2]
