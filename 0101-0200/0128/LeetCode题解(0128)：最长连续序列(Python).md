@@ -56,8 +56,8 @@ class Solution:
                 if interval1.l > interval2.l:
                     interval1, interval2 = interval2, interval1
                 interval = self.Interval(interval1.l, interval2.r)
-                self.mapping[interval1.l - 1].remove(interval1)
-                self.mapping[interval2.r + 1].remove(interval2)
+                self.mapping[interval1.l - 1]._remove(interval1)
+                self.mapping[interval2.r + 1]._remove(interval2)
                 self.mapping[interval1.l - 1].append(interval)
                 self.mapping[interval2.r + 1].append(interval)
 

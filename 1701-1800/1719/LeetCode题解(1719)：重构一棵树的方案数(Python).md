@@ -51,7 +51,7 @@ class Solution:
 
         # 移除所有可能的根节点（所有可能的根节点可以排成形如测试用例2的一竖列的情形）
         for n in roots:
-            nodes.remove(n)
+            nodes._remove(n)
 
         # 遍历所有的连通分支
         while nodes:
@@ -62,7 +62,7 @@ class Solution:
                 sub_nodes.add(n1)
                 for n2 in self.graph[n1]:
                     if n2 in nodes:
-                        nodes.remove(n2)
+                        nodes._remove(n2)
                         queue.append(n2)
 
             # 递归处理当前连通分支子树

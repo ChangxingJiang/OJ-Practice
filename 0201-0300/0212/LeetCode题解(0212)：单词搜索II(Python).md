@@ -44,7 +44,7 @@ class Solution:
                 if (i2, j2) not in visited:
                     visited.add((i2, j2))
                     dfs(now, i2, j2, visited)
-                    visited.remove((i2, j2))
+                    visited._remove((i2, j2))
 
         ans = set()
 

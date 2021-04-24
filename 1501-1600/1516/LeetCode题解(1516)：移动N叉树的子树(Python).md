@@ -18,7 +18,7 @@ class Solution:
         # 处理p为根节点的情况
         if root == p:
             q_parent = self.dfs2(root, q)  # Q节点的父节点
-            q_parent.children.remove(q)
+            q_parent.children._remove(q)
             q.children.append(p)
             return q
 
@@ -32,7 +32,7 @@ class Solution:
         # 处理q子树存在于p子树中的情况
         elif self.dfs1(p, q):
             q_parent = self.dfs2(p, q)  # Q节点的父节点
-            q_parent.children.remove(q)
+            q_parent.children._remove(q)
             idx = p_parent.children.index(p)  # P节点的父节点中P节点的序数
             q.children.append(p)
             p_parent.children[idx] = q
@@ -40,7 +40,7 @@ class Solution:
 
         # 处理q子树不存在于p子树中的情况
         else:
-            p_parent.children.remove(p)
+            p_parent.children._remove(p)
             q.children.append(p)
             return root
 

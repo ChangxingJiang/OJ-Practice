@@ -28,7 +28,7 @@ class RandomizedCollection:
         if self.dict[val]:
             idx = self.dict[val].pop()
             if len(self.nums) > 1 and idx != len(self.nums) - 1:
-                self.dict[self.nums[-1]].remove(len(self.nums) - 1)
+                self.dict[self.nums[-1]]._remove(len(self.nums) - 1)
                 self.dict[self.nums[-1]].add(idx)
                 self.nums[idx] = self.nums[-1]
             self.nums.pop()

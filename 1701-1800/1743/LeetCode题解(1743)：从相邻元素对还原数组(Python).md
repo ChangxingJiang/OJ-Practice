@@ -34,7 +34,7 @@ class Solution:
         while near[ans[-1]]:
             now = ans[-1]
             nxt = near[now].pop()
-            near[nxt].remove(now)
+            near[nxt]._remove(now)
             ans.append(nxt)
 
         return ans

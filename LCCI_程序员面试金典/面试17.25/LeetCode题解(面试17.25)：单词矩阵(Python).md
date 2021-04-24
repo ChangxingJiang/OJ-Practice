@@ -95,7 +95,7 @@ class Solution:
                             # 累计执行:O(w1)
                             for maybe_word in list(col_lst_copy[j]):
                                 if maybe_word[now] != maybe[j]:
-                                    col_lst_copy[j].remove(maybe_word)
+                                    col_lst_copy[j]._remove(maybe_word)
 
                             # 如果当前列剩余的选择数为0则剪枝
                             if len(col_lst_copy[j]) == 0:

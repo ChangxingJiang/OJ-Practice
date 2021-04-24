@@ -54,7 +54,7 @@ class Solution:
                         for (i1, j1) in list(graph.keys()):
                             for i2, j2 in list(graph[(i1, j1)]):
                                 if (i2, j2) not in graph:
-                                    graph[(i1, j1)].remove((i2, j2))
+                                    graph[(i1, j1)]._remove((i2, j2))
                             if len(graph[(i1, j1)]) == 0:
                                 del graph[(i1, j1)]
 

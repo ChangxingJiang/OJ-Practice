@@ -133,13 +133,13 @@ class Solution:
                             min2_old, max2_old = res[i2][0], res[i2][-1]
 
                             temp = copy.copy(res[i1])
-                            temp.remove(n1)
+                            temp._remove(n1)
                             temp.append(n2)
                             temp.sort()
                             min1_new, max1_new = temp[0], temp[-1]
 
                             temp = copy.copy(res[i2])
-                            temp.remove(n2)
+                            temp._remove(n2)
                             temp.append(n1)
                             temp.sort()
                             min2_new, max2_new = temp[0], temp[-1]

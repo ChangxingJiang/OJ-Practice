@@ -42,12 +42,12 @@ class Solution:
             if num < aim:
                 now.append(i)
                 self.count_choose(now, i + 1, aim - num)
-                now.remove(i)
+                now._remove(i)
                 self.count_choose(now, i + 1, aim)
             elif num == aim:
                 now.append(i)
                 self.chooses_set.add(tuple(now))
-                now.remove(i)
+                now._remove(i)
                 self.count_choose(now, i + 1, aim)
 
     def count_ans(self, surplus, i):

@@ -40,7 +40,7 @@ class Solution:
                 # 能遍历到i时，说明i只有一条邻边
                 i = queue.popleft()
                 j = graph[i].pop()
-                graph[j].remove(i)
+                graph[j]._remove(i)
                 if len(graph[j]) == 1:
                     queue.append(j)
 

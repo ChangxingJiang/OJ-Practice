@@ -19,7 +19,7 @@ class Solution:
                 if ss[:i] not in now:
                     now.add(ss[:i])
                     recursor(ss[i:], val + 1, now.copy())
-                    now.remove(ss[:i])
+                    now._remove(ss[:i])
 
         recursor(s, 0, set())
 

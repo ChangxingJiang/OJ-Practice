@@ -39,7 +39,7 @@ class Solution:
                     leaf.left = TreeNode(0)
                     leaf.right = TreeNode(0)
                     new_leaf_lst = leaf_lst.copy()
-                    new_leaf_lst.remove(leaf)
+                    new_leaf_lst._remove(leaf)
                     new_leaf_lst.append(leaf.left)
                     new_leaf_lst.append(leaf.right)
                     recursor(new_leaf_lst, k - 1)

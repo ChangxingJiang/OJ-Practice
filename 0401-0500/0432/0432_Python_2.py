@@ -47,7 +47,7 @@ class AllOne:
 
             # 当前节点不只一个key的情况
             else:
-                node.lst.remove(key)
+                node.lst._remove(key)
                 # 存在times+1的节点
                 if node.next.idx == node.idx + 1:
                     node.next.lst.add(key)
@@ -79,7 +79,7 @@ class AllOne:
 
                 # 当前节点不只一个key的情况
                 else:
-                    node.lst.remove(key)
+                    node.lst._remove(key)
 
             else:
                 # 当前节点只有一个key的情况
@@ -96,7 +96,7 @@ class AllOne:
 
                 # 当前节点不只一个key的情况
                 else:
-                    node.lst.remove(key)
+                    node.lst._remove(key)
                     # 存在times+1的节点
                     if node.prev.idx == node.idx - 1:
                         node.prev.lst.add(key)
