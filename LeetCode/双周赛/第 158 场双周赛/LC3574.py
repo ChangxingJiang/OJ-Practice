@@ -1,3 +1,9 @@
+"""
+数组、数学、枚举、数论
+
+LogTrick：https://leetcode.cn/problems/maximize-subarray-gcd-score/solutions/3695642/liang-chong-xie-fa-bao-li-mei-ju-logtric-zz7e/
+"""
+
 import math
 from typing import List
 

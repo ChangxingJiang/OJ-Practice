@@ -1,3 +1,7 @@
+"""
+贪心算法、数组、哈希表、排序、堆（优先队列）
+"""
+
 from typing import List
 
 

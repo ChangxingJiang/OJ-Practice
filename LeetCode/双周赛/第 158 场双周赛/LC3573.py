@@ -1,3 +1,7 @@
+"""
+数组、动态规划
+"""
+
 from typing import List
 
 
